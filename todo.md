@@ -99,6 +99,11 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Étape 3 — QR code du site public
+- [x] Ajouter un QR code vers le site public.
+- [x] Ajouter agrandissement et téléchargement PNG.
+- [x] Vérifier le dashboard, le build, le commit et le push.
+
 ## Étape 2 — Lien public dans le dashboard
 - [x] Ajouter une carte « Votre lien de commande ».
 - [x] Ajouter un bouton pour copier l’adresse publique.
