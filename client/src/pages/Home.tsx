@@ -4,11 +4,11 @@ import { ArrowRight, ChevronRight, Minus, Plus, ShoppingBag, Sparkles, X } from 
 
 // Style reminder: enseigne solaire d’Abidjan, bordeaux signal, jaune maïs, orange toasté, surfaces ivoire et composition éditoriale décalée.
 const products = [
-  { id: "simple", name: "Panini Simple", description: "Pain toasté, sauce maison", price: 500, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_71bd6a28.jpg" },
-  { id: "viande", name: "Panini Viande", description: "Viande assaisonnée, sauce maison", price: 1000, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_71bd6a28.jpg" },
-  { id: "jambon", name: "Panini Jambon", description: "Jambon, salade et sauce maison", price: 1500, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_71bd6a28.jpg" },
-  { id: "jambon-fromage", name: "Panini Jambon Fromage", description: "Jambon, fromage fondant et sauce maison", price: 2000, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_71bd6a28.jpg" },
-  { id: "chawarma", name: "Chawarma Poulet", description: "Poulet mariné, salade et sauce blanche", price: 1500, category: "Chawarma", image: "/manus-storage/panini-gloire-chawarma_e7ee5d4f.jpg" },
+  { id: "simple", name: "Panini Simple", description: "Pain toasté, sauce maison", price: 500, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_8b9ca958.jpg" },
+  { id: "viande", name: "Panini Viande", description: "Viande assaisonnée, sauce maison", price: 1000, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_8b9ca958.jpg" },
+  { id: "jambon", name: "Panini Jambon", description: "Jambon, salade et sauce maison", price: 1500, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_8b9ca958.jpg" },
+  { id: "jambon-fromage", name: "Panini Jambon Fromage", description: "Jambon, fromage fondant et sauce maison", price: 2000, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_8b9ca958.jpg" },
+  { id: "chawarma", name: "Chawarma Poulet", description: "Poulet mariné, salade et sauce blanche", price: 1500, category: "Chawarma", image: "/manus-storage/panini-gloire-chawarma_885df6c0.jpg" },
 ];
 
 type CartItem = (typeof products)[number] & { quantity: number };
@@ -44,7 +44,7 @@ export default function Home() {
 
   return <main className="min-h-screen pb-28">
     <header className="site-header">
-      <div className="header-inner"><Link href="/" className="brand-lockup"><img src="/manus-storage/panini-gloire-logo_77ce412b.png" alt="Logo Panini de la Gloire" className="brand-mark" /><span className="brand-copy"><strong>PANINI DE LA GLOIRE</strong><small>ADJAMÉ BINGERVILLE • EN FACE DE BONPRIX</small></span></Link><Link href="/commande" className="account-link">Commander <ArrowRight size={16} /></Link></div>
+      <div className="header-inner"><Link href="/" className="brand-lockup"><span className="brand-mark brand-sg" role="img" aria-label="Logo Panini de la Gloire">SG</span><span className="brand-copy"><strong>PANINI DE LA GLOIRE</strong><small>ADJAMÉ BINGERVILLE • EN FACE DE BONPRIX</small></span></Link><Link href="/commande" className="account-link">Commander <ArrowRight size={16} /></Link></div>
     </header>
 
     <section className="hero-shell">

@@ -99,6 +99,16 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Remplacement du logo
+- [x] Remplacer le logo image par un symbole rouge de pain ou les initiales SG.
+- [x] Vérifier l’affichage desktop et mobile.
+- [x] Refaire build, commit et push.
+
+## Correction urgente des images de production
+- [ ] Vérifier les images cassées sur le domaine Netlify.
+- [ ] Corriger les références d’assets localement.
+- [ ] Refaire build, commit et push, puis confirmer la correction.
+
 ## Modification de l’en-tête
 - [x] Afficher « PANINI DE LA GLOIRE » en titre fort.
 - [x] Placer « ADJAMÉ BINGERVILLE • EN FACE DE BONPRIX » sous le titre.

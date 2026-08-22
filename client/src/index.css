@@ -43,6 +43,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .header-inner { max-width: 1180px; margin: 0 auto; padding: 18px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .brand-lockup { display: flex; align-items: center; gap: 12px; color: var(--cacao); text-decoration: none; }
 .brand-mark { width: 42px; height: 42px; object-fit: contain; border-radius: 5px; }
+.brand-sg { display: grid; place-items: center; flex: 0 0 auto; background: var(--red); color: var(--maize); border: 2px solid var(--burgundy-deep); font-family: "Plus Jakarta Sans", sans-serif; font-size: 16px; font-weight: 950; letter-spacing: -.08em; line-height: 1; }
 .brand-copy { display: flex !important; flex-direction: column; gap: 4px; }
 .brand-lockup small, .eyebrow { color: var(--burgundy); font-size: 11px; font-weight: 800; letter-spacing: .19em; }
 .brand-copy strong { order: 1; color: var(--cacao); font-family: "Plus Jakarta Sans", sans-serif; font-size: 20px; font-weight: 950; letter-spacing: .035em; line-height: 1; }
@@ -56,7 +57,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .hero-copy h1 { font-family: "Plus Jakarta Sans", sans-serif; font-size: clamp(48px, 7vw, 92px); line-height: .94; letter-spacing: -.075em; max-width: 680px; margin: 28px 0; }
 .hero-copy h1 em { color: var(--maize); font-style: normal; }
 .hero-intro { max-width: 480px; color: #ffeac4; font-size: 18px; line-height: 1.55; }
-.hero-image { width: 44%; min-height: 560px; background: url('/manus-storage/panini-gloire-hero_f484e6b2.jpg') center/cover; }
+.hero-image { width: 44%; min-height: 560px; background: url('/manus-storage/panini-gloire-hero_bb0f133e.jpg') center/cover; }
 .primary-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--maize); color: var(--burgundy-deep); border-radius: 999px; padding: 15px 22px; font-weight: 900; text-decoration: none; border: 0; cursor: pointer; transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out), background 160ms var(--ease-out); }
 .primary-button:hover { background: #ffd85b; transform: translateY(-3px); box-shadow: 0 10px 24px rgba(244,197,66,.24); }
 .primary-button:active, .add-button:active { transform: scale(.97); }
