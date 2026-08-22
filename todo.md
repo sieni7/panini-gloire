@@ -45,3 +45,13 @@
 - [ ] Stocker le PIN Marina uniquement dans une variable secrète Netlify.
 - [ ] Ajouter une session admin temporaire côté serveur.
 - [ ] Refuser toute publication GitHub sans session admin valide.
+
+- [ ] Vérifier les modifications non sauvegardées dans la copie Windows avant synchronisation.
+- [ ] Mettre à jour la copie locale depuis GitHub main React.
+- [ ] Réinstaller les dépendances et relancer le contrôle local.
+
+- [x] Analyser les cinq vulnérabilités npm sans appliquer audit fix --force.
+- [x] Corriger les variables analytics non définies dans index.html.
+- [x] Corriger ou remplacer la référence hero non résolue.
+
+- [x] Relancer npm install avec un journal lisible avant de conclure sur l’audit.
