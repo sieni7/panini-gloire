@@ -259,6 +259,12 @@
 - [x] Mettre à jour brief-marina.md avec les changements visibles.
 - [ ] Refaire check, build, commit, push et publication.
 
+## Accès persistants du Dashboard
+- [x] Garder « Informations du site » visible en permanence dans la sidebar.
+- [x] Garder « Voir le site » accessible en permanence dans l’en-tête.
+- [x] Vérifier la lisibilité et le fonctionnement sur mobile avec le style responsive prévu.
+- [x] Mettre à jour brief-marina.md, puis valider et synchroniser.
+
 ## Documentation intégrée à l’espace privé
 - [x] Ajouter le lien « Documentation » dans la sidebar du Dashboard.
 - [x] Afficher le guide Marina et la FAQ dans une page privée dédiée.
