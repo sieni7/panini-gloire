@@ -98,3 +98,14 @@
 - [x] Ajouter une barre de panier persistante et des contrôles de quantité accessibles.
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
+
+## Règle de synchronisation locale et distante
+- [ ] Vérifier l’état local et la branche GitHub avant chaque livraison.
+- [ ] Exécuter `pnpm run check` et `pnpm run build` localement.
+- [ ] Créer un commit local descriptif.
+- [ ] Pousser le commit vers GitHub `main` et vérifier l’alignement.
+
+## Réalignement chromatique demandé
+- [ ] Remplacer toutes les références vertes par jaune foncé, orangé et rouge/bordeaux.
+- [ ] Renforcer les textes et titres en marron foncé.
+- [ ] Vérifier le contraste, le rendu mobile et le build.

@@ -11,13 +11,13 @@ La référence visuelle est l’expérience existante de `https://panini-gloire.
 ## Core Principles
 
 1. **Impact immédiat** : le premier écran doit communiquer le lieu, la promesse et l’action principale sans détour.
-2. **Chaleur maîtrisée** : le vert de marque porte l’énergie et la fraîcheur ; les tons crème et jaune rappellent le pain toasté et la cuisine minute.
+2. **Chaleur maîtrisée** : le jaune foncé et l’orangé portent l’énergie solaire de l’enseigne ; le rouge apporte le relief et le crème rappelle le pain toasté.
 3. **Commande sans friction** : chaque interaction doit réduire l’effort entre le choix d’un produit et la confirmation WhatsApp.
 4. **Clarté locale** : les prix en FCFA, la localisation précise et les modalités de réception restent visibles et compréhensibles.
 
 ## Color Philosophy
 
-Le **vert gloire** exprime la fraîcheur, la confiance et la vitalité. Le crème ivoire évite l’apparence froide d’une interface purement numérique ; le jaune maïs agit comme accent alimentaire et repère d’action. Le noir cacao donne une assise premium aux zones de panier et aux informations importantes.
+Le **jaune maïs profond** exprime la chaleur, la générosité et l’énergie de l’enseigne. L’orangé évoque le pain toasté, le rouge donne du relief aux actions et le marron cacao garantit une typographie forte et lisible sur les surfaces crème.
 
 ## Layout Paradigm
 
@@ -25,7 +25,7 @@ Une composition verticale éditoriale : en-tête compact, hero large à dominant
 
 ## Signature Elements
 
-Le projet reprend un **hero vert en dégradé**, un **panier noir cacao fixé** et des **accents jaunes en pastilles ou onglets**. Les arrondis sont généreux sur les surfaces interactives mais réservés aux zones qui évoquent réellement un emballage ou une assiette.
+Le projet reprend un **hero rouge-orang é en dégradé**, un **panier noir cacao fixé** et des **accents jaune foncé en pastilles ou onglets**. Les arrondis sont généreux sur les surfaces interactives mais réservés aux zones qui évoquent réellement un emballage ou une assiette.
 
 ## Interaction Philosophy
 
@@ -53,11 +53,11 @@ Exemples : **« La pause qui mérite une ovation. »** et **« Votre commande es
 
 ## Wordmark & Logo
 
-Le symbole est une **couronne abstraite formée de trois pointes de pain toasté**, dessinée en aplat vert gloire et jaune maïs, sans texte. Le wordmark utilise le nom en capitales compactes avec une ligature visuelle entre les deux mots ; il ne doit pas être remplacé par un simple texte générique dans le logo.
+Le symbole est une **couronne abstraite formée de trois pointes de pain toasté**, dessinée en aplats rouge et jaune maïs, sans texte. Le wordmark utilise le nom en capitales compactes avec une ligature visuelle entre les deux mots ; il ne doit pas être remplacé par un simple texte générique dans le logo.
 
 ## Signature Brand Color
 
-**Vert gloire — `#087F45`**. Cette couleur doit rester le repère visuel propriétaire du projet, avec des variations lumineuses réservées aux surfaces et aux états actifs.
+**Jaune maïs profond — `#D99A16`**. Cette couleur est le repère visuel propriétaire du projet, soutenue par l’orangé `#ED7D31`, le rouge `#A72D24` et le marron cacao `#29151A`.
 
 ## Contraintes fonctionnelles héritées
 
@@ -69,7 +69,7 @@ La marque doit apparaître comme une enseigne propriétaire : symbole couronne e
 
 ## Style Decisions — Passe Sprint 1
 
-Le vert gloire `#087F45` devient le signal principal des états de parcours et des surfaces de marque, tandis que le bordeaux conserve le rôle de profondeur éditoriale. La confirmation doit reprendre le symbole, les aplats et la voix de l’accueil afin d’éviter un écran utilitaire isolé. Les cartes produit conserveront leur système actuel jusqu’à la disponibilité de visuels propres à chaque recette ; aucune image répétée ne doit être considérée comme définitive.
+Le jaune maïs profond devient le signal principal des états de parcours et des surfaces de marque ; l’orangé et le rouge structurent les actions, tandis que le marron cacao porte les textes forts. La confirmation doit reprendre le symbole, les aplats et la voix de l’accueil afin d’éviter un écran utilitaire isolé. Les cartes produit conserveront leur système actuel jusqu’à la disponibilité de visuels propres à chaque recette ; aucune image répétée ne doit être considérée comme définitive.
 
 ## Vérification visuelle
 

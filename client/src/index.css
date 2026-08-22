@@ -11,8 +11,8 @@
   --maize: #f4c542;
   --orange: #ed7d31;
   --orange-deep: #c65322;
-  --green: #087f45;
-  --green-deep: #056437;
+  --red: #a72d24;
+  --red-deep: #7d1f1a;
   --burgundy: #7d1f35;
   --burgundy-deep: #541426;
   --cacao: #29151a;
@@ -50,7 +50,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .account-link:hover { background: #fff1bf; transform: translateY(-2px); }
 
 .hero-shell { max-width: 1180px; min-height: 560px; margin: 48px auto 0; border-radius: 34px; overflow: hidden; position: relative; display: flex; align-items: stretch; background: var(--burgundy); box-shadow: 0 24px 70px rgba(84,20,38,.18); }
-.hero-copy { width: 56%; padding: 78px 56px; color: var(--cream); position: relative; z-index: 2; background: linear-gradient(120deg, var(--green-deep), var(--green) 62%, rgba(8,127,69,.78)); }
+.hero-copy { width: 56%; padding: 78px 56px; color: var(--cream); position: relative; z-index: 2; background: linear-gradient(120deg, var(--red-deep), var(--red) 62%, rgba(167,45,36,.78)); }
 .hero-copy .eyebrow { color: var(--maize); display: flex; align-items: center; gap: 8px; }
 .hero-copy h1 { font-family: "Plus Jakarta Sans", sans-serif; font-size: clamp(48px, 7vw, 92px); line-height: .94; letter-spacing: -.075em; max-width: 680px; margin: 28px 0; }
 .hero-copy h1 em { color: var(--maize); font-style: normal; }
@@ -67,7 +67,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .delivery-note { color: var(--muted); font-weight: 700; }
 .category-tabs { display: inline-flex; gap: 5px; background: #fbe9a8; padding: 5px; border-radius: 999px; margin: 30px 0 24px; }
 .category-tabs button { border: 0; background: transparent; color: var(--burgundy); padding: 11px 18px; border-radius: 999px; font-weight: 900; cursor: pointer; }
-.category-tabs button.active { background: var(--green); color: var(--cream); box-shadow: 0 5px 14px rgba(8,127,69,.24); }
+.category-tabs button.active { background: var(--red); color: var(--cream); box-shadow: 0 5px 14px rgba(167,45,36,.24); }
 .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .product-card { background: rgba(255,255,255,.52); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; box-shadow: 0 12px 28px rgba(84,20,38,.06); animation: rise 500ms var(--ease-out) both; animation-delay: var(--delay); }
 .product-image { aspect-ratio: 1.12; background-position: center; background-size: cover; }
@@ -107,19 +107,19 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 @media (max-width: 520px) { .brand-mark { width: 34px; height: 34px; } .brand-lockup strong { font-size: 17px; } .brand-lockup small { max-width: 210px; line-height: 1.25; } .hero-copy h1 { font-size: 52px; } .hero-intro { font-size: 16px; } .section-heading { display: block; } .delivery-note { display: block; margin-top: 14px; font-size: 13px; } .product-grid { gap: 10px; } .product-info { display: block; } .product-info > strong { display: block; margin-top: 8px; } .cart-drawer { padding: 24px 18px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
 
-/* Confirmation surfaces: green glory action, ivory card, cacao type. */
-.confirmation-page { min-height: calc(100vh - 82px); padding: 72px 18px 120px; display: grid; place-items: center; background: radial-gradient(circle at 12% 15%, rgba(8,127,69,.13), transparent 32%), var(--cream); }
+/* Confirmation surfaces: red and orange action, ivory card, cacao type. */
+.confirmation-page { min-height: calc(100vh - 82px); padding: 72px 18px 120px; display: grid; place-items: center; background: radial-gradient(circle at 12% 15%, rgba(237,125,49,.18), transparent 32%), var(--cream); }
 .confirmation-card { width: min(560px, 100%); padding: 34px; border: 1px solid var(--line); border-radius: 28px; background: rgba(255,255,255,.72); box-shadow: 0 22px 60px rgba(84,20,38,.13); }
-.confirmation-check { width: 68px; height: 68px; display: grid; place-items: center; border-radius: 20px; color: var(--cream); background: var(--green); margin-bottom: 25px; }
+.confirmation-check { width: 68px; height: 68px; display: grid; place-items: center; border-radius: 20px; color: var(--cream); background: var(--red); margin-bottom: 25px; }
 .confirmation-card h1 { margin: 14px 0; color: var(--cacao); font-family: "Plus Jakarta Sans", sans-serif; font-size: clamp(42px, 8vw, 66px); letter-spacing: -.07em; line-height: .95; }
 .confirmation-lead { color: var(--muted); font-size: 17px; line-height: 1.5; }
 .confirmation-reference, .confirmation-total { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
 .confirmation-reference { margin-top: 28px; color: var(--muted); font-size: 13px; }
 .confirmation-reference strong { color: var(--cacao); font-size: 12px; }
 .confirmation-total { color: var(--cacao); font-weight: 800; border-bottom: 0; }
-.confirmation-total strong { color: var(--green); font-size: 26px; }
-.whatsapp-button { width: 100%; margin-top: 13px; background: var(--green); color: white; }
-.whatsapp-button:hover { background: var(--green-deep); box-shadow: 0 10px 24px rgba(8,127,69,.22); }
+.confirmation-total strong { color: var(--red); font-size: 26px; }
+.whatsapp-button { width: 100%; margin-top: 13px; background: var(--red); color: white; }
+.whatsapp-button:hover { background: var(--red-deep); box-shadow: 0 10px 24px rgba(167,45,36,.22); }
 .confirmation-card .back-link { justify-content: center; width: 100%; margin-top: 22px; }
 
 /* Checkout surfaces: calm ivory form, cacao summary, maize action. */
