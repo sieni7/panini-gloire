@@ -8,3 +8,20 @@
 
 - [ ] Synchroniser le projet React vers la branche main existante du dépôt GitHub après comparaison finale.
 - [ ] Vérifier que la copie Windows peut être resynchronisée sans mélanger l’ancien projet Next.js.
+
+- [ ] Vérifier GitHub, Netlify et Supabase avant la synchronisation Windows.
+- [ ] Confirmer que la copie Windows pointe vers la branche main React.
+
+- [ ] Arrêter les processus qui verrouillent panini-gloire-final.
+- [ ] Recréer la copie locale depuis GitHub main React.
+
+- [ ] Arrêter uniquement le PID Node 14684 qui écoute sur le port 3001.
+
+- [x] Corriger le conflit npm Vite 7 et vite-plugin-jsx-loc.
+- [x] Régénérer le lockfile avec npm et valider l’installation Windows.
+
+- [x] Supprimer la configuration pnpm qui bloque npm sous Windows.
+- [ ] Régénérer package-lock.json et republier la correction après validation.
+
+- [x] Retirer l’import résiduel du plugin JSX dans vite.config.ts.
+- [x] Refaire le build après nettoyage de la configuration Vite.
