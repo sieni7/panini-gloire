@@ -99,6 +99,21 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Correctif build Netlify — Secret Scanning
+- [ ] Exclure uniquement le cache interne `.netlify/**` du scan des secrets.
+- [ ] Relancer check, build, commit et push.
+- [ ] Vérifier un nouveau déploiement Netlify.
+
+## Correctif authentification dashboard
+- [ ] Auditer la fonction `/api/admin-auth` et le flux PIN.
+- [ ] Vérifier les variables Netlify nécessaires.
+- [ ] Corriger, puis refaire build, commit, push et test.
+
+## Logo PG rond
+- [ ] Rendre le monogramme PG parfaitement rond.
+- [ ] Supprimer toute bordure visible.
+- [ ] Refaire build, commit, push et vérification visuelle.
+
 ## Dashboard Marina
 - [ ] Relier Home aux fichiers `products.json` et `site.json` pour rendre les publications visibles.
 - [ ] Auditer le dashboard existant et sa protection PIN.
