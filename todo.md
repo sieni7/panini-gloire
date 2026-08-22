@@ -259,6 +259,11 @@
 - [x] Mettre à jour brief-marina.md avec les changements visibles.
 - [ ] Refaire check, build, commit, push et publication.
 
+## Ajustement du libellé du login
+- [x] Remplacer « site » par « application » uniquement dans `/dashboard/login`.
+- [x] Vérifier le guide Marina : le libellé n’y est pas mentionné.
+- [x] Refaire check et build ; commit, push et publication à finaliser.
+
 ## Publication refusée depuis le Dashboard
 - [ ] Vérifier la session administrateur avant l’appel de publication.
 - [ ] Vérifier les variables nécessaires côté fonction sans afficher leurs valeurs.
