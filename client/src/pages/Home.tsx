@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 import { ArrowRight, ChevronRight, Minus, Plus, ShoppingBag, Sparkles, X } from "lucide-react";
 
-// Style reminder: afro-modern convivial, emerald signature color, warm ivory surfaces, editorial asymmetry.
+// Style reminder: enseigne solaire d’Abidjan, bordeaux signal, jaune maïs, orange toasté, surfaces ivoire et composition éditoriale décalée.
 const products = [
   { id: "simple", name: "Panini Simple", description: "Pain toasté, sauce maison", price: 500, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_71bd6a28.jpg" },
   { id: "viande", name: "Panini Viande", description: "Viande assaisonnée, sauce maison", price: 1000, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_71bd6a28.jpg" },
@@ -13,11 +13,21 @@ const products = [
 
 type CartItem = (typeof products)[number] & { quantity: number };
 
+const readCart = (): CartItem[] => {
+  try {
+    const stored = JSON.parse(localStorage.getItem("panini-gloire-cart") || "[]");
+    const candidate = Array.isArray(stored) ? stored : stored?.items;
+    return Array.isArray(candidate) ? candidate.filter((item) => item && typeof item.id === "string" && typeof item.quantity === "number" && item.quantity > 0) : [];
+  } catch {
+    return [];
+  }
+};
+
 const formatCFA = (value: number) => `${new Intl.NumberFormat("fr-FR").format(value)} F`;
 
 export default function Home() {
   const [category, setCategory] = useState<"Panini" | "Chawarma">("Panini");
-  const [cart, setCart] = useState<CartItem[]>(() => JSON.parse(localStorage.getItem("panini-gloire-cart") || "[]"));
+  const [cart, setCart] = useState<CartItem[]>(readCart);
   const [cartOpen, setCartOpen] = useState(false);
 
   useEffect(() => localStorage.setItem("panini-gloire-cart", JSON.stringify(cart)), [cart]);

@@ -7,9 +7,19 @@ const formatCFA = (value: number) => `${new Intl.NumberFormat("fr-FR").format(va
 
 type CartLine = { name: string; price: number; quantity: number };
 
+const readCart = (): CartLine[] => {
+  try {
+    const stored = JSON.parse(localStorage.getItem("panini-gloire-cart") || "[]");
+    const candidate = Array.isArray(stored) ? stored : stored?.items;
+    return Array.isArray(candidate) ? candidate.filter((item) => item && typeof item.name === "string" && typeof item.price === "number" && typeof item.quantity === "number" && item.quantity > 0) : [];
+  } catch {
+    return [];
+  }
+};
+
 export default function Checkout() {
   const [, navigate] = useLocation();
-  const [cart] = useState<CartLine[]>(() => JSON.parse(localStorage.getItem("panini-gloire-cart") || "[]"));
+  const [cart] = useState<CartLine[]>(readCart);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [type, setType] = useState<"sur_place" | "livraison">("sur_place");

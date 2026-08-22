@@ -76,3 +76,8 @@
 
 - [ ] Comparer la section overrides de package.json et les champs settings du lockfile.
 - [ ] Valider la compatibilité avec pnpm 10.30.3 utilisé par Netlify.
+
+- [x] Localiser le reduce qui reçoit une valeur non tableau.
+- [x] Valider la forme de products.json côté chargement.
+- [x] Ajouter un fallback sûr pour éviter le crash runtime.
+- [x] Tester puis republier la correction Netlify.
