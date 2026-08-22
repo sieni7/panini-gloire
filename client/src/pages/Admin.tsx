@@ -103,7 +103,7 @@ export default function Admin() {
     return "";
   };
   const saveDraft = () => {
-    const error = validateProduct(selected);
+    const error = products.map(validateProduct).find(Boolean) || "";
     if (error) { setFormError(error); return; }
     setFormError(""); localStorage.setItem("panini-gloire-editor-draft", JSON.stringify({ products, categories, site })); setSaved(true); window.setTimeout(() => setSaved(false), 2200);
   };
