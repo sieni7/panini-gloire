@@ -259,6 +259,12 @@
 - [x] Mettre à jour brief-marina.md avec les changements visibles.
 - [ ] Refaire check, build, commit, push et publication.
 
+## FAQ client à enrichir dans le guide Marina
+- [x] Ajouter des questions et réponses prêtes à reprendre par Marina.
+- [x] Couvrir commande, paiement, WhatsApp, livraison et rupture de stock.
+- [x] Conserver un langage simple et rassurant.
+- [ ] Valider et synchroniser le document Marina.
+
 ## Message client à ajouter au guide Marina
 - [x] Ajouter un message prêt à envoyer pour présenter la nouvelle commande en ligne.
 - [x] Insister sur la simplicité : choisir, vérifier le total et envoyer sur WhatsApp.

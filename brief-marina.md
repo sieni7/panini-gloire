@@ -75,27 +75,41 @@ Lorsqu’un problème arrive, il est utile de m’envoyer :
 
 Il ne faut pas envoyer de mot de passe, de code secret, de numéro complet d’un client ou de capture contenant des informations confidentielles. Même un petit détail comme un bouton qui ne répond pas, une photo qui ne s’affiche pas ou un texte difficile à comprendre est utile à signaler.
 
-## 6. FAQ : cinq préoccupations fréquentes
+## 6. FAQ : réponses simples pour les clients
 
-### 1. La commande est-elle envoyée automatiquement à Marina ?
+Marina peut reprendre ces réponses directement dans une conversation WhatsApp.
 
-Non. L’application prépare le message, mais le client doit ouvrir WhatsApp et appuyer sur **Envoyer**. Marina doit donc vérifier les messages WhatsApp reçus comme pour toute autre commande.
+### 1. Comment passer une commande ?
 
-### 2. Le client peut-il payer sur le site ?
+Ouvrez le lien de la carte, choisissez vos produits, ajoutez-les au panier, vérifiez le total, indiquez vos coordonnées, puis appuyez sur le bouton WhatsApp pour envoyer la demande.
 
-Non. Il n’y a pas encore de paiement en ligne. Le site affiche le total, mais aucun argent n’est prélevé par l’application. Le paiement se fait selon l’organisation prévue par Marina, sur place ou à la livraison.
+### 2. Faut-il créer un compte ?
 
-### 3. Que faire lorsqu’un produit est en rupture ?
+Non. Il n’est pas nécessaire de créer un compte. Le client indique simplement son nom et son numéro de téléphone pour que Marina puisse le recontacter.
 
-Dans le dashboard, ouvrez le produit et décochez **Produit disponible sur la carte**, puis préparez la publication. La photo restera visible, mais le bouton d’ajout sera grisé et désactivé pour les clients.
+### 3. La commande est-elle envoyée automatiquement à Marina ?
 
-### 4. Une modification est-elle visible immédiatement ?
+L’application prépare le message, mais le client doit ouvrir WhatsApp, vérifier les informations et appuyer lui-même sur **Envoyer**. Marina vérifie ensuite les messages reçus.
 
-Pas toujours. Il faut enregistrer le changement, préparer sa publication, attendre la mise à jour du site, puis actualiser la page. Si l’ancien texte reste affiché, fermez et rouvrez la page ou essayez une nouvelle fenêtre.
+### 4. Le client peut-il payer sur l’application ?
 
-### 5. Que faire si le dashboard refuse le code ou affiche une erreur ?
+Non. Il n’y a pas encore de paiement en ligne. L’application affiche le total, mais ne prélève aucun argent. Les modalités de paiement sont confirmées directement avec Marina, sur place ou à la livraison.
 
-Vérifiez d’abord que vous utilisez le code qui vous a été communiqué séparément et que vous êtes sur l’adresse `/dashboard`. Si le problème continue, envoyez-moi une capture du message d’erreur sans montrer le code, ainsi que l’heure et l’appareil utilisés.
+### 5. Peut-on choisir entre sur place et livraison ?
+
+Oui. Le client choisit **Sur place** ou **Livraison** dans le formulaire. Pour une livraison, Marina confirme directement l’adresse et les modalités avec le client.
+
+### 6. Que faire lorsqu’un produit est en rupture ?
+
+Si un produit n’est plus disponible, Marina le désactive dans l’espace privé. Sa photo peut rester visible, mais le bouton d’ajout devient grisé pour éviter une demande impossible.
+
+### 7. Une modification est-elle visible immédiatement ?
+
+Pas toujours. Marina enregistre d’abord le changement, prépare la publication, puis vérifie la carte après sa mise à jour. Si l’ancien texte reste affiché, il faut actualiser la page après quelques instants.
+
+### 8. Que faire si le client rencontre un problème ?
+
+Demandez-lui ce qu’il essayait de faire, l’adresse de la page et le message affiché. Une capture d’écran peut aider, mais elle ne doit pas montrer de code secret ni d’informations personnelles.
 
 ## 7. Conseils pour une utilisation quotidienne
 
