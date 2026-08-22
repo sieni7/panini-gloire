@@ -10,7 +10,7 @@ Le site est accessible ici : **https://panini-gloire.netlify.app**
 
 L’espace réservé à Marina est accessible ici : **https://panini-gloire.netlify.app/dashboard**
 
-Le code d’accès actuel au dashboard est : **2026**.
+Le code d’accès est communiqué séparément et ne doit jamais être écrit dans un document public.
 
 ## 2. Ce que les clients peuvent faire aujourd’hui
 
@@ -81,7 +81,7 @@ Pas toujours. Il faut enregistrer le changement, préparer sa publication, atten
 
 ### 5. Que faire si le dashboard refuse le code ou affiche une erreur ?
 
-Vérifiez d’abord que le code est bien **2026** et que vous êtes sur l’adresse `/dashboard`. Si le problème continue, envoyez-moi une capture du message d’erreur sans montrer le code, ainsi que l’heure et l’appareil utilisés.
+Vérifiez d’abord que vous utilisez le code qui vous a été communiqué séparément et que vous êtes sur l’adresse `/dashboard`. Si le problème continue, envoyez-moi une capture du message d’erreur sans montrer le code, ainsi que l’heure et l’appareil utilisés.
 
 ## 7. Conseils pour une utilisation quotidienne
 

@@ -99,6 +99,11 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Incident build Netlify
+- [ ] Examiner le journal ou message d’erreur du build.
+- [ ] Corriger la cause dans le projet.
+- [ ] Relancer check, build, commit, push et vérifier Netlify.
+
 ## Brief utilisateur pour Marina
 - [x] Décrire uniquement les fonctions actuellement disponibles.
 - [x] Expliquer clairement ce que l’application ne fait pas encore.
