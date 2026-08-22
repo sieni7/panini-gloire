@@ -5,7 +5,7 @@ import { ArrowRight, ChevronRight, Minus, Plus, Search, Share2, ShoppingBag, Spa
 // Style reminder: enseigne solaire d’Abidjan, bordeaux signal, jaune maïs, orange toasté, surfaces ivoire et composition éditoriale décalée.
 type Product = { id: string; name: string; description: string; price: number; category: string; image: string; available?: boolean; badge?: string; sortOrder?: number };
 type Category = { id: string; name: string; sortOrder?: number };
-type Site = { brandName: string; locationLabel: string; address: string; phone: string; heroEyebrow: string; heroTitle: string; heroDescription: string; serviceNote: string; openingHours: string; deliveryNote: string; whatsappTemplate: string };
+type Site = { brandName: string; locationLabel: string; address: string; phone: string; activeHero?: string; heroEyebrow: string; heroTitle: string; heroDescription: string; serviceNote: string; openingHours: string; deliveryNote: string; whatsappTemplate: string };
 
 const fallbackProducts: Product[] = [
   { id: "simple", name: "Panini Simple", description: "Pain toasté, sauce maison", price: 500, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp", available: true, sortOrder: 1 },
@@ -15,7 +15,14 @@ const fallbackProducts: Product[] = [
   { id: "chawarma", name: "Chawarma Poulet", description: "Poulet mariné, salade et sauce blanche", price: 1500, category: "Chawarma", image: "/assets/panini-gloire-chawarma.webp", available: true, sortOrder: 5 },
 ];
 
-const fallbackSite: Site = { brandName: "Panini de la Gloire", locationLabel: "ADJAMÉ BINGERVILLE • EN FACE DE BONPRIX", address: "Adjamé Bingerville • En face de BonPrix", phone: "+2250574971022", heroEyebrow: "FAIT MINUTE, LIVRÉ AVEC LE SOURIRE", heroTitle: "La pause qui mérite une ovation.", heroDescription: "Choisissez votre recette, composez votre panier et confirmez votre commande directement sur WhatsApp.", serviceNote: "Paiement à la livraison", openingHours: "Tous les jours · 10h00 — 22h00", deliveryNote: "Livraison selon zone et disponibilité", whatsappTemplate: "Nouvelle commande — Panini de la Gloire" };
+const fallbackSite: Site = { brandName: "Panini de la Gloire", locationLabel: "ADJAMÉ BINGERVILLE • EN FACE DE BONPRIX", address: "Adjamé Bingerville • En face de BonPrix", phone: "+2250574971022", activeHero: "1", heroEyebrow: "FAIT MINUTE, LIVRÉ AVEC LE SOURIRE", heroTitle: "La pause qui mérite une ovation.", heroDescription: "Choisissez votre recette, composez votre panier et confirmez votre commande directement sur WhatsApp.", serviceNote: "Paiement à la livraison", openingHours: "Tous les jours · 10h00 — 22h00", deliveryNote: "Livraison selon zone et disponibilité", whatsappTemplate: "Nouvelle commande — Panini de la Gloire" };
+
+type HeroVariant = { id: string; eyebrow: string; title: string; description: string; primaryLabel: string; secondaryLabel: string; secondaryHref: string; className: string };
+const heroVariants: Record<string, HeroVariant> = {
+  "1": { id: "1", eyebrow: "FAIT MINUTE, LIVRÉ AVEC LE SOURIRE", title: "La pause qui mérite une ovation.", description: "Paninis faits minute, Chawarma savoureux. Adjamé Bingerville, en face de BonPrix.", primaryLabel: "Voir le menu", secondaryLabel: "Commander", secondaryHref: "/commande", className: "hero-variant-warm" },
+  "2": { id: "2", eyebrow: "STREET FOOD D’ABIDJAN", title: "PANINI. CHAWARMA. LA GLOIRE.", description: "Choisissez votre recette, composez votre panier et envoyez votre commande sur WhatsApp.", primaryLabel: "Commander", secondaryLabel: "Voir le menu", secondaryHref: "#menu", className: "hero-variant-street" },
+  "3": { id: "3", eyebrow: "ADJAMÉ BINGERVILLE · EN FACE DE BONPRIX", title: "Une pause qui a son quartier.", description: "Des paninis chauds, préparés avec soin, à emporter ou à livrer selon votre zone.", primaryLabel: "Voir le menu", secondaryLabel: "Nous trouver", secondaryHref: "https://maps.google.com/?q=Adjamé+Bingerville+BonPrix", className: "hero-variant-postcard" },
+};
 
 type CartItem = Product & { quantity: number };
 
@@ -36,6 +43,7 @@ export default function Home() {
   const [categories, setCategories] = useState<Category[]>([{ id: "panini", name: "Panini", sortOrder: 1 }, { id: "chawarma", name: "Chawarma", sortOrder: 2 }]);
   const [products, setProducts] = useState<Product[]>(fallbackProducts);
   const [site, setSite] = useState<Site>(fallbackSite);
+  const activeHero = heroVariants[site.activeHero || "1"] || heroVariants["1"];
   const [cart, setCart] = useState<CartItem[]>(readCart);
   const [cartOpen, setCartOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -73,8 +81,8 @@ export default function Home() {
       <div className="header-inner"><Link href="/" className="brand-lockup"><span className="brand-mark brand-sg" role="img" aria-label="Logo Panini de la Gloire">PG</span><span className="brand-copy"><strong>{site.brandName.toUpperCase()}</strong><small>{site.locationLabel}</small></span></Link><div className="header-actions"><button type="button" className="share-button" onClick={shareSite} aria-label="Partager le lien du site"><Share2 size={17} /><span>Partager</span></button><Link href="/commande" className="account-link">Commander <ArrowRight size={16} /></Link></div></div>{shareMessage && <p className="share-feedback" role="status">{shareMessage}</p>}
     </header>
 
-    <section className="hero-shell">
-      <div className="hero-copy"><p className="eyebrow"><Sparkles size={15} /> {site.heroEyebrow}</p><h1>{site.heroTitle.split(" mérite")[0]}<br /><em>mérite une ovation.</em></h1><p className="hero-intro">{site.heroDescription}</p><a className="primary-button" href="#menu">Voir le menu <ChevronRight size={19} /></a></div>
+    <section className={`hero-shell ${activeHero.className}`}>
+      <div className="hero-copy"><p className="eyebrow"><Sparkles size={15} /> {activeHero.eyebrow}</p><h1>{activeHero.title}</h1><p className="hero-intro">{activeHero.description}</p><div className="hero-actions"><a className="primary-button" href={activeHero.id === "2" ? "/commande" : "#menu"}>{activeHero.primaryLabel} <ChevronRight size={19} /></a><a className="hero-secondary-button" href={activeHero.secondaryHref}>{activeHero.secondaryLabel}</a></div></div>
       <div className="hero-image" role="img" aria-label="Panini fraîchement toasté" />
     </section>
 

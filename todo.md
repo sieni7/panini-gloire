@@ -240,6 +240,13 @@
 - [x] Mettre à jour brief-marina.md après chaque évolution fonctionnelle ou modification visible.
 - [x] Vérifier que le guide décrit les fonctions disponibles, les limites et les conseils d’utilisation.
 
+## Héros harmonisés et activables depuis le Dashboard
+- [x] Définir un modèle JSON commun aux trois variantes de hero.
+- [x] Conserver une structure identique : surtitre, titre, description, image ou fond, action principale, action secondaire et repères pratiques.
+- [x] Utiliser une seule valeur `activeHero` pour garantir qu’un seul hero est actif.
+- [x] Ajouter un fallback vers le hero actuel si la valeur est absente ou invalide.
+- [x] Mettre à jour brief-marina.md après intégration.
+
 ## Passe UI/UX demandée
 - [x] Auditer le site public et le dashboard sur desktop et mobile.
 - [x] Améliorer la hiérarchie visuelle, les états d’action et la navigation mobile.

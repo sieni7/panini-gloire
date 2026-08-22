@@ -30,6 +30,8 @@ Dans le dashboard, Marina peut modifier les informations du catalogue : le nom d
 
 Marina peut aussi remplacer la photo d’un produit et modifier les informations visibles du site : le nom de l’enseigne, la localisation, le numéro WhatsApp, les horaires, le texte d’accueil et les indications de service.
 
+Dans **Informations du site**, Marina peut choisir le hero affiché sur la page d’accueil. Les trois choix sont présentés sous la même forme : **Chaud & gourmand**, **Street food moderne** et **Carte postale d’Abidjan**. Un seul choix est actif à la fois. Il suffit de sélectionner le hero souhaité, d’enregistrer le brouillon, puis de préparer la publication. Si aucune valeur correcte n’est publiée, le site conserve automatiquement le hero de secours actuel.
+
 Les changements peuvent d’abord être enregistrés comme brouillon. La publication est ensuite préparée pour mettre à jour les fichiers du site. Après une publication, il faut vérifier le site public pour confirmer que la modification apparaît correctement.
 
 L’interface a été améliorée pour faciliter la lecture : les actions principales sont mises en évidence en jaune, les actions importantes en rouge ou orangé, et des repères visuels de type « carte du quartier » distinguent les zones essentielles. Sur téléphone, les rubriques et les boutons s’empilent proprement pour éviter les erreurs de manipulation.

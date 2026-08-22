@@ -64,6 +64,16 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .hero-copy h1 em { color: var(--maize); font-style: normal; }
 .hero-intro { max-width: 480px; color: #ffeac4; font-size: 18px; line-height: 1.55; }
 .hero-image { width: 44%; min-height: 560px; background: url('/assets/panini-gloire-hero.webp') center/cover; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.hero-secondary-button { display: inline-flex; align-items: center; min-height: 46px; padding: 0 17px; border: 1px solid rgba(255,248,232,.55); border-radius: 999px; color: var(--cream); font-weight: 850; text-decoration: none; }
+.hero-secondary-button:hover { background: rgba(255,248,232,.14); }
+.hero-variant-street .hero-copy { background: linear-gradient(135deg, var(--maize), var(--orange)); color: var(--cacao); }
+.hero-variant-street .hero-copy h1, .hero-variant-street .hero-copy .hero-intro { color: var(--cacao); }
+.hero-variant-street .hero-secondary-button { border-color: var(--cacao); color: var(--cacao); }
+.hero-variant-postcard .hero-copy { background: var(--cream); color: var(--cacao); }
+.hero-variant-postcard .hero-copy h1, .hero-variant-postcard .hero-copy .hero-intro { color: var(--cacao); }
+.hero-variant-postcard .hero-secondary-button { border-color: var(--burgundy); color: var(--burgundy); }
+.hero-variant-postcard .hero-image { filter: saturate(.78) sepia(.12); }
 .primary-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--maize); color: var(--burgundy-deep); border-radius: 999px; padding: 15px 22px; font-weight: 900; text-decoration: none; border: 0; cursor: pointer; transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out), background 160ms var(--ease-out); }
 .primary-button:hover { background: #ffd85b; transform: translateY(-3px); box-shadow: 0 10px 24px rgba(244,197,66,.24); }
 .primary-button:active, .add-button:active { transform: scale(.97); }
@@ -135,7 +145,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes slide { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
 @media (max-width: 850px) { .hero-shell { margin: 22px 16px 0; min-height: 620px; display: block; } .hero-copy { width: 100%; padding: 52px 28px 42px; } .hero-image { width: 100%; min-height: 230px; } .product-grid { grid-template-columns: repeat(2, 1fr); } .menu-section { padding: 0 16px; margin-top: 64px; } .catalog-tools { top: 65px; } .header-inner { padding: 14px 16px; } .brand-lockup small { font-size: 9px; letter-spacing: .13em; } .account-link { font-size: 0; padding: 11px; } .account-link svg { width: 18px; } }
-@media (max-width: 520px) { .section-signals { align-items: flex-start; flex-direction: column; gap: 9px; margin-top: 16px; } .product-card:nth-child(2), .product-card:nth-child(4) { margin-top: 0; } .brand-mark { width: 34px; height: 34px; } .brand-lockup strong { font-size: 17px; } .brand-copy small { max-width: 260px; line-height: 1.25; } .hero-copy h1 { font-size: 52px; } .hero-intro { font-size: 16px; } .section-heading { display: block; } .catalog-tools { display: block; top: 58px; } .search-box { min-width: 0; width: 100%; } .category-tabs { margin: 12px 0 10px; } .delivery-note { display: block; margin-top: 14px; font-size: 13px; } .product-grid { grid-template-columns: 1fr; gap: 14px; } .product-info { display: block; } .product-info > strong { display: block; margin-top: 8px; } .cart-drawer { padding: 24px 18px; } }
+@media (max-width: 520px) { .hero-actions { align-items: stretch; flex-direction: column; } .hero-actions .primary-button, .hero-actions .hero-secondary-button { justify-content: center; width: 100%; } .hero-picker-grid { grid-template-columns: 1fr; } .section-signals { align-items: flex-start; flex-direction: column; gap: 9px; margin-top: 16px; } .product-card:nth-child(2), .product-card:nth-child(4) { margin-top: 0; } .brand-mark { width: 34px; height: 34px; } .brand-lockup strong { font-size: 17px; } .brand-copy small { max-width: 260px; line-height: 1.25; } .hero-copy h1 { font-size: 52px; } .hero-intro { font-size: 16px; } .section-heading { display: block; } .catalog-tools { display: block; top: 58px; } .search-box { min-width: 0; width: 100%; } .category-tabs { margin: 12px 0 10px; } .delivery-note { display: block; margin-top: 14px; font-size: 13px; } .product-grid { grid-template-columns: 1fr; gap: 14px; } .product-info { display: block; } .product-info > strong { display: block; margin-top: 8px; } .cart-drawer { padding: 24px 18px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
 
 /* Confirmation surfaces: red and orange action, ivory card, cacao type. */
@@ -245,6 +255,15 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .status-dot { width: 9px; height: 9px; border-radius: 50%; background: #d9742e; }
 .status-dot.off { background: #b8a9a2; }
 .admin-form-card, .site-form-card { display: grid; gap: 17px; }
+.hero-picker { margin: 0; padding: 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff4cb; }
+.hero-picker legend { padding: 0 7px; color: var(--cacao); font-weight: 900; }
+.hero-picker .admin-help { margin: 0 0 13px; }
+.hero-picker-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.hero-choice { display: flex; align-items: flex-start; gap: 9px; min-height: 76px; padding: 12px; border: 1px solid rgba(125,31,53,.18); border-radius: 12px; background: #fffaf0; color: var(--cacao); cursor: pointer; }
+.hero-choice.active { border-color: var(--red); box-shadow: inset 0 0 0 2px var(--red); }
+.hero-choice input { margin-top: 3px; accent-color: var(--red); }
+.hero-choice strong, .hero-choice small { display: block; }
+.hero-choice small { margin-top: 5px; color: var(--muted); font-size: 11px; line-height: 1.35; }
 .admin-form-heading { display: flex; justify-content: space-between; align-items: start; padding-bottom: 13px; border-bottom: 1px solid var(--line); }
 .admin-form-heading h3 { font-family: "Plus Jakarta Sans", sans-serif; font-size: 27px; letter-spacing: -.06em; margin: 8px 0 0; }
 .admin-form-card label, .site-form-card label { color: var(--cacao); font-weight: 800; font-size: 13px; }
