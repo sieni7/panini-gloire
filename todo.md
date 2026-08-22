@@ -81,3 +81,7 @@
 - [x] Valider la forme de products.json côté chargement.
 - [x] Ajouter un fallback sûr pour éviter le crash runtime.
 - [x] Tester puis republier la correction Netlify.
+
+- [ ] Pousser le correctif m.reduce vers GitHub main.
+- [ ] Vérifier que Netlify reconstruit depuis le nouveau commit.
+- [ ] Tester le panier avec localStorage nettoyé.
