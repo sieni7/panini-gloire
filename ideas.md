@@ -67,6 +67,10 @@ Le catalogue de référence contient Panini Simple à 500 F, Panini Viande à 1 
 
 La marque doit apparaître comme une enseigne propriétaire : symbole couronne en trois pointes de pain toasté et nom compact, sans dépendre d’un simple texte standard. Le motif d’affichage de quartier sera renforcé par des pastilles jaune maïs, des tickets courts et des aplats bordeaux/cacao. Les images produit doivent représenter des paninis et chawarmas chauds, toastés et généreux ; les images génériques de burger/frites ne conviennent pas. Les CTA doivent parler avec une énergie locale et directe, tandis que la composition doit assumer davantage les ruptures éditoriales et les blocs de couleur.
 
+## Style Decisions — Passe Sprint 1
+
+Le vert gloire `#087F45` devient le signal principal des états de parcours et des surfaces de marque, tandis que le bordeaux conserve le rôle de profondeur éditoriale. La confirmation doit reprendre le symbole, les aplats et la voix de l’accueil afin d’éviter un écran utilitaire isolé. Les cartes produit conserveront leur système actuel jusqu’à la disponibilité de visuels propres à chaque recette ; aucune image répétée ne doit être considérée comme définitive.
+
 ## Vérification visuelle
 
 La première passe desktop et mobile confirme une composition claire : hero bordeaux et jaune, photographie de panini toasté, logo visible, panier fixé et checkout avec état vide compréhensible. Le mobile conserve une bonne lisibilité et une action « Voir le menu » accessible. Le logo généré apparaît avec un fond rose résiduel dans l’aperçu ; ce point devra être corrigé ou remplacé par une version réellement transparente avant la livraison finale.

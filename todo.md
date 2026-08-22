@@ -92,3 +92,9 @@
 
 - [x] Ajouter la page /confirmation pour éviter le 404 après checkout.
 - [x] Relier la route confirmation et vérifier le message WhatsApp généré.
+
+## Sprint 1 UX/UI
+- [x] Auditer la structure actuelle du panier et du checkout.
+- [x] Ajouter une barre de panier persistante et des contrôles de quantité accessibles.
+- [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
+- [x] Valider le build et le rendu responsive.
