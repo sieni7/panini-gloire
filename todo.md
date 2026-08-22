@@ -55,3 +55,17 @@
 - [x] Corriger ou remplacer la référence hero non résolue.
 
 - [x] Relancer npm install avec un journal lisible avant de conclure sur l’audit.
+
+- [ ] Régénérer pnpm-lock.yaml après retrait de Vite et Vitest.
+- [x] Vérifier que Netlify peut installer avec frozen-lockfile.
+
+- [x] Régénérer pnpm-lock.yaml pour supprimer les anciennes références Vite et Vitest.
+- [ ] Tester pnpm install --frozen-lockfile avant nouveau checkpoint.
+
+- [x] Autoriser uniquement les scripts de build de esbuild et @tailwindcss/oxide dans pnpm.
+- [x] Rejouer pnpm install --frozen-lockfile après cette déclaration.
+
+- [ ] Déplacer onlyBuiltDependencies dans pnpm-workspace.yaml, format reconnu par pnpm 11.
+
+- [x] Réajouter vite comme dépendance de développement explicite.
+- [x] Régénérer package-lock.json et pnpm-lock.yaml après réintégration.
