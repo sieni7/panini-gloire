@@ -240,6 +240,6 @@
 - [x] Auditer la gestion actuelle des produits, catégories, QR et publication.
 - [x] Vérifier et corriger la synchronisation du statut « disponible » avec le catalogue public.
 - [x] Tester le dashboard sur ordinateur et mobile.
-- [ ] Mettre à jour le guide simplifié de Marina avec les nouvelles fonctions.
+- [x] Mettre à jour le guide simplifié de Marina avec les nouvelles fonctions.
 - [ ] Tester le cycle brouillon → publication GitHub → déploiement Netlify.
 - [ ] Commiter et pousser chaque modification validée.
