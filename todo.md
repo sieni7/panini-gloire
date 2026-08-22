@@ -236,6 +236,10 @@
 - [ ] Renforcer les textes et titres en marron foncé.
 - [ ] Vérifier le contraste, le rendu mobile et le build.
 
+## Règle permanente — document Marina
+- [x] Mettre à jour brief-marina.md après chaque évolution fonctionnelle ou modification visible.
+- [x] Vérifier que le guide décrit les fonctions disponibles, les limites et les conseils d’utilisation.
+
 ## Stabilisation finale du dashboard éditorial
 - [x] Auditer la gestion actuelle des produits, catégories, QR et publication.
 - [x] Vérifier et corriger la synchronisation du statut « disponible » avec le catalogue public.
