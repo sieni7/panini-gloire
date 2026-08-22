@@ -32,6 +32,8 @@ Marina peut aussi remplacer la photo d’un produit et modifier les informations
 
 Les changements peuvent d’abord être enregistrés comme brouillon. La publication est ensuite préparée pour mettre à jour les fichiers du site. Après une publication, il faut vérifier le site public pour confirmer que la modification apparaît correctement.
 
+L’interface a été améliorée pour faciliter la lecture : les actions principales sont mises en évidence en jaune, les actions importantes en rouge ou orangé, et des repères visuels de type « carte du quartier » distinguent les zones essentielles. Sur téléphone, les rubriques et les boutons s’empilent proprement pour éviter les erreurs de manipulation.
+
 Marina peut également ouvrir la rubrique **Catégories** pour ajouter une nouvelle catégorie, renommer une catégorie existante ou la supprimer. Une catégorie ne peut être supprimée que si aucun produit ne lui est encore associé.
 
 Dans la carte **Votre lien de commande**, les boutons permettent de copier le lien du site, d’agrandir le QR code ou de télécharger son image. Le QR code peut ensuite être imprimé ou partagé pour permettre aux clients d’ouvrir directement la carte.

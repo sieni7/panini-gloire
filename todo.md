@@ -240,6 +240,13 @@
 - [x] Mettre à jour brief-marina.md après chaque évolution fonctionnelle ou modification visible.
 - [x] Vérifier que le guide décrit les fonctions disponibles, les limites et les conseils d’utilisation.
 
+## Passe UI/UX demandée
+- [x] Auditer le site public et le dashboard sur desktop et mobile.
+- [x] Améliorer la hiérarchie visuelle, les états d’action et la navigation mobile.
+- [x] Vérifier contraste, focus clavier et lisibilité.
+- [x] Mettre à jour brief-marina.md avec les changements visibles.
+- [ ] Refaire check, build, commit, push et publication.
+
 ## Blocage Netlify confirmé par contrôle visuel
 - [ ] Identifier le site Netlify réellement lié au domaine public.
 - [ ] Comparer son dernier déploiement avec le commit GitHub `f60c6a5`.
