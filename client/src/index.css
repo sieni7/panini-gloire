@@ -42,8 +42,8 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .site-header { background: rgba(255, 248, 232, 0.92); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 30; backdrop-filter: blur(16px); }
 .header-inner { max-width: 1180px; margin: 0 auto; padding: 18px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .brand-lockup { display: flex; align-items: center; gap: 12px; color: var(--cacao); text-decoration: none; }
-.brand-mark { width: 42px; height: 42px; object-fit: contain; border-radius: 5px; }
-.brand-sg { display: grid; place-items: center; flex: 0 0 auto; background: var(--red); color: var(--maize); border: 2px solid var(--burgundy-deep); font-family: "Plus Jakarta Sans", sans-serif; font-size: 16px; font-weight: 950; letter-spacing: -.08em; line-height: 1; }
+.brand-mark { width: 42px; height: 42px; object-fit: contain; border-radius: 50%; }
+.brand-sg { display: grid; place-items: center; flex: 0 0 auto; width: 42px; height: 42px; border-radius: 50%; background: var(--red); color: var(--maize); border: 0; font-family: "Plus Jakarta Sans", sans-serif; font-size: 16px; font-weight: 950; letter-spacing: -.08em; line-height: 1; }
 .brand-copy { display: flex !important; flex-direction: column; gap: 4px; }
 .brand-lockup small, .eyebrow { color: var(--burgundy); font-size: 11px; font-weight: 800; letter-spacing: .19em; }
 .brand-copy strong { order: 1; color: var(--cacao); font-family: "Plus Jakarta Sans", sans-serif; font-size: 20px; font-weight: 950; letter-spacing: .035em; line-height: 1; }
