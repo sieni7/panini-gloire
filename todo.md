@@ -259,6 +259,12 @@
 - [x] Mettre à jour brief-marina.md avec les changements visibles.
 - [ ] Refaire check, build, commit, push et publication.
 
+## Message client à ajouter au guide Marina
+- [x] Ajouter un message prêt à envoyer pour présenter la nouvelle commande en ligne.
+- [x] Insister sur la simplicité : choisir, vérifier le total et envoyer sur WhatsApp.
+- [x] Laisser un emplacement clair pour le lien de la carte.
+- [ ] Valider et synchroniser le document Marina.
+
 ## Amélioration de la fiche produit du Dashboard
 - [x] Simplifier les explications visibles pour Marina.
 - [x] Ajouter une miniature dans la fiche de modification du produit.

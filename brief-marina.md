@@ -107,6 +107,24 @@ Gardez WhatsApp ouvert et vérifiez régulièrement les nouveaux messages. Pour 
 
 Enfin, envoyez-moi régulièrement vos remarques, même lorsqu’il ne s’agit pas d’une panne. Vos retours permettront d’améliorer l’utilisation du site pour vous et de rendre la commande plus claire pour vos clients.
 
-## 8. Résumé en une phrase
+## 8. Message à envoyer aux clients
+
+Marina peut copier-coller le message suivant et remplacer **[insérer le lien]** par le lien de la carte :
+
+> Bonjour à tous,
+>
+> **Panini de la Gloire vous facilite désormais la commande !**
+>
+> Consultez notre carte en ligne, choisissez vos paninis ou chawarmas, vérifiez le total et envoyez votre commande directement sur WhatsApp.
+>
+> C’est simple : ouvrez le lien **[insérer le lien]**, choisissez vos produits, ajoutez-les au panier, indiquez votre nom et votre numéro, puis choisissez **sur place** ou **livraison**. WhatsApp s’ouvrira ensuite pour vous permettre de vérifier le message et de l’envoyer.
+>
+> Pas besoin de créer un compte et aucune démarche compliquée. Vous choisissez tranquillement, nous vous répondons directement.
+>
+> **Panini de la Gloire : vous choisissez, nous préparons, vous vous régalez !**
+>
+> À bientôt !
+
+## 9. Résumé en une phrase
 
 **Le site présente vos produits et prépare les commandes sur WhatsApp ; Marina garde la confirmation avec le client, tandis que le dashboard lui permet de maintenir les informations du menu à jour.**
