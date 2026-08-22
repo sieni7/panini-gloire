@@ -69,3 +69,10 @@
 
 - [x] Réajouter vite comme dépendance de développement explicite.
 - [x] Régénérer package-lock.json et pnpm-lock.yaml après réintégration.
+
+- [ ] Vérifier que Netlify installe avec le lockfile corrigé.
+- [ ] Contrôler l’URL publique et la route dashboard.
+- [ ] Resynchroniser la copie Windows après validation de production.
+
+- [ ] Comparer la section overrides de package.json et les champs settings du lockfile.
+- [ ] Valider la compatibilité avec pnpm 10.30.3 utilisé par Netlify.
