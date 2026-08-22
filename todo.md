@@ -99,6 +99,12 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Gestion catégories et produits
+- [x] Ajouter, modifier et supprimer des catégories.
+- [x] Ajouter, modifier et supprimer des produits.
+- [x] Protéger les suppressions et conserver la compatibilité JSON.
+- [x] Refaire build, commit, push et test complet.
+
 ## Étape 4 — Édition sûre des produits
 - [ ] Vérifier les champs obligatoires du formulaire produit.
 - [ ] Valider le prix, la catégorie et la disponibilité sans modifier l’identifiant.

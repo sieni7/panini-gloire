@@ -35,9 +35,9 @@ export async function handler(event: { httpMethod?: string; body?: string; heade
   const { owner, repo, token } = config();
   const cookie = event.headers?.cookie || event.headers?.Cookie;
   if (!owner || !repo || !token || !validSession(cookieValue(cookie))) return json(401, { error: "Session administrateur invalide" });
-  let body: { products?: unknown[]; site?: Record<string, unknown>; message?: string } = {};
+  let body: { products?: unknown[]; categories?: unknown[]; site?: Record<string, unknown>; message?: string } = {};
   try { body = JSON.parse(event.body || "{}"); } catch { return json(400, { error: "Données invalides" }); }
-  if (!Array.isArray(body.products) || !body.site || typeof body.site !== "object") return json(400, { error: "Le catalogue et les informations du site sont requis" });
+  if (!Array.isArray(body.products) || !Array.isArray(body.categories) || !body.site || typeof body.site !== "object") return json(400, { error: "Le catalogue, les catégories et les informations du site sont requis" });
   try {
     const uploads: Array<{ path: string; base64: string }> = [];
     const publishedProducts = body.products.map((item) => {
@@ -53,6 +53,7 @@ export async function handler(event: { httpMethod?: string; body?: string; heade
     });
     for (const upload of uploads) await upsert(upload.path, upload.base64, body.message || "chore: update product image", true);
     await upsert("client/public/data/products.json", `${JSON.stringify(publishedProducts, null, 2)}\n`, body.message || "chore: update editable catalogue");
+    await upsert("client/public/data/categories.json", `${JSON.stringify(body.categories, null, 2)}\n`, body.message || "chore: update editable categories");
     await upsert("client/public/data/site.json", `${JSON.stringify(body.site, null, 2)}\n`, body.message || "chore: update editable site information");
     return json(200, { ok: true, message: "Proposition GitHub créée" });
   } catch (error) { return json(502, { error: error instanceof Error ? error.message : "Publication impossible" }); }

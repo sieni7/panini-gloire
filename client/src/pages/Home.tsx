@@ -3,7 +3,8 @@ import { Link } from "wouter";
 import { ArrowRight, ChevronRight, Minus, Plus, Search, Share2, ShoppingBag, Sparkles, X } from "lucide-react";
 
 // Style reminder: enseigne solaire d’Abidjan, bordeaux signal, jaune maïs, orange toasté, surfaces ivoire et composition éditoriale décalée.
-type Product = { id: string; name: string; description: string; price: number; category: "Panini" | "Chawarma"; image: string; available?: boolean; badge?: string; sortOrder?: number };
+type Product = { id: string; name: string; description: string; price: number; category: string; image: string; available?: boolean; badge?: string; sortOrder?: number };
+type Category = { id: string; name: string; sortOrder?: number };
 type Site = { brandName: string; locationLabel: string; address: string; phone: string; heroEyebrow: string; heroTitle: string; heroDescription: string; serviceNote: string; openingHours: string; deliveryNote: string; whatsappTemplate: string };
 
 const fallbackProducts: Product[] = [
@@ -31,7 +32,8 @@ const readCart = (): CartItem[] => {
 const formatCFA = (value: number) => `${new Intl.NumberFormat("fr-FR").format(value)} F`;
 
 export default function Home() {
-  const [category, setCategory] = useState<"Panini" | "Chawarma">("Panini");
+  const [category, setCategory] = useState("Panini");
+  const [categories, setCategories] = useState<Category[]>([{ id: "panini", name: "Panini", sortOrder: 1 }, { id: "chawarma", name: "Chawarma", sortOrder: 2 }]);
   const [products, setProducts] = useState<Product[]>(fallbackProducts);
   const [site, setSite] = useState<Site>(fallbackSite);
   const [cart, setCart] = useState<CartItem[]>(readCart);
@@ -40,7 +42,7 @@ export default function Home() {
   const [shareMessage, setShareMessage] = useState("");
 
   useEffect(() => { localStorage.setItem("panini-gloire-cart", JSON.stringify(cart)); }, [cart]);
-  useEffect(() => { void Promise.all([fetch("/data/products.json").then((response) => response.ok ? response.json() : Promise.reject(response.status)), fetch("/data/site.json").then((response) => response.ok ? response.json() : Promise.reject(response.status))]).then(([nextProducts, nextSite]) => { if (Array.isArray(nextProducts)) setProducts(nextProducts); if (nextSite && typeof nextSite === "object") setSite(nextSite); }).catch(() => undefined); }, []);
+  useEffect(() => { void Promise.all([fetch("/data/products.json").then((response) => response.ok ? response.json() : Promise.reject(response.status)), fetch("/data/site.json").then((response) => response.ok ? response.json() : Promise.reject(response.status)), fetch("/data/categories.json").then((response) => response.ok ? response.json() : Promise.reject(response.status))]).then(([nextProducts, nextSite, nextCategories]) => { if (Array.isArray(nextProducts)) setProducts(nextProducts); if (nextSite && typeof nextSite === "object") setSite(nextSite); if (Array.isArray(nextCategories) && nextCategories.length) { setCategories(nextCategories); setCategory(nextCategories[0].name); } }).catch(() => undefined); }, []);
 
   const visible = products.filter((product) => product.category === category && `${product.name} ${product.description}`.toLowerCase().includes(query.trim().toLowerCase()));
   const total = useMemo(() => cart.reduce((sum, item) => sum + item.price * item.quantity, 0), [cart]);
@@ -77,7 +79,7 @@ export default function Home() {
     </section>
 
     <section id="menu" className="menu-section"><div className="section-heading"><div><p className="eyebrow dark">NOTRE CARTE</p><h2>Aujourd’hui, on se régale</h2></div><span className="delivery-note">{site.serviceNote}</span></div>
-      <div className="catalog-tools"><div className="category-tabs" role="tablist">{(["Panini", "Chawarma"] as const).map((item) => <button key={item} className={category === item ? "active" : ""} onClick={() => setCategory(item)} role="tab" aria-selected={category === item}>{item}{item === "Panini" ? "s" : ""}</button>)}</div><label className="search-box"><Search size={17} /><span className="sr-only">Rechercher un produit</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Rechercher dans la carte" /></label></div>
+      <div className="catalog-tools"><div className="category-tabs" role="tablist">{categories.sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0)).map((item) => <button key={item.id} className={category === item.name ? "active" : ""} onClick={() => setCategory(item.name)} role="tab" aria-selected={category === item.name}>{item.name}{item.name.toLowerCase() === "panini" ? "s" : ""}</button>)}</div><label className="search-box"><Search size={17} /><span className="sr-only">Rechercher un produit</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Rechercher dans la carte" /></label></div>
       <div className="product-grid">{visible.map((product, index) => <article className="product-card" style={{ "--delay": `${index * 70}ms` } as React.CSSProperties} key={product.id}><div className="product-image" style={{ backgroundImage: `url(${product.image})` }} />{product.badge ? <span className="product-badge">{product.badge}</span> : null}{product.available === false ? <span className="stock-badge">RUPTURE</span> : null}{cart.find((item) => item.id === product.id)?.quantity ? <span className="quantity-badge">x{cart.find((item) => item.id === product.id)?.quantity}</span> : null}<div className="product-info"><div><h3>{product.name}</h3><p>{product.description}</p></div><strong>{formatCFA(product.price)}</strong></div><button className={`add-button ${product.available === false ? "is-disabled" : ""}`} disabled={product.available === false} onClick={() => { add(product); setCartOpen(true); }}>{product.available === false ? "Rupture de stock" : <><Plus size={17} /> Ajouter</>}</button></article>)}</div></section>
 
     {count > 0 && <button type="button" className="cart-bar" onClick={() => setCartOpen(true)} aria-label={`Ouvrir le panier, ${count} article${count > 1 ? "s" : ""}`}><span className="cart-bar-label"><span className="cart-icon"><ShoppingBag size={18} /></span><strong>{count} article{count > 1 ? "s" : ""}</strong><small>dans votre panier</small></span><strong>{formatCFA(total)}</strong></button>}

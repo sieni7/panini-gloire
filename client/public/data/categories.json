@@ -1,0 +1,12 @@
+[
+  {
+    "id": "panini",
+    "name": "Panini",
+    "sortOrder": 1
+  },
+  {
+    "id": "chawarma",
+    "name": "Chawarma",
+    "sortOrder": 2
+  }
+]
