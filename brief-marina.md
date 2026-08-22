@@ -40,6 +40,8 @@ Pour une modification importante, vérifiez d’abord le brouillon, puis la publ
 
 Lors du dernier contrôle, l’accès au dashboard public fonctionnait, mais le site Netlify affichait encore les anciens intitulés **ESPACE ÉDITORIAL**, **Le comptoir de Marina** et l’ancien ordre des rubriques. Le dépôt GitHub contient bien la version corrigée. Il faut donc vérifier la liaison entre Netlify, le dépôt `sieni7/panini-gloire` et la branche `main` avant de considérer cette modification comme visible pour les clients.
 
+Si le site public reste ancien après une modification, ne republiez pas plusieurs fois le même changement et ne modifiez pas le code d’accès. Signalez simplement l’heure du test et envoyez une capture sans information confidentielle afin de vérifier le déploiement.
+
 ## 4. Ce que l’application ne fait pas encore
 
 Pour éviter toute confusion, voici les limites actuelles :
