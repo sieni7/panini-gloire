@@ -99,6 +99,13 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Sprint 2 — Catalogue et navigation
+- [ ] Ajouter une recherche simple au catalogue.
+- [ ] Rendre la navigation des catégories plus pratique sur mobile.
+- [ ] Afficher la quantité choisie sur les cartes produits.
+- [ ] Préparer des visuels distincts par recette.
+- [ ] Refaire build, commit, push et test responsive.
+
 ## Correction du monogramme
 - [x] Remplacer le monogramme SG par PG.
 - [ ] Refaire build, commit et push.
@@ -107,6 +114,11 @@
 - [x] Remplacer le logo image par un symbole rouge de pain ou les initiales SG.
 - [x] Vérifier l’affichage desktop et mobile.
 - [x] Refaire build, commit et push.
+
+## Diagnostic images production — nouvelle vérification
+- [ ] Tester les URLs d’images directement sur panini-gloire.netlify.app.
+- [ ] Vérifier le déploiement et la présence des fichiers dans la sortie publiée.
+- [ ] Corriger la stratégie d’assets, puis build, commit, push et test public.
 
 ## Correction urgente des images de production
 - [ ] Vérifier les images cassées sur le domaine Netlify.

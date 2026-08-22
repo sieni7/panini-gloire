@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
-import { ArrowRight, ChevronRight, Minus, Plus, ShoppingBag, Sparkles, X } from "lucide-react";
+import { ArrowRight, ChevronRight, Minus, Plus, Search, ShoppingBag, Sparkles, X } from "lucide-react";
 
 // Style reminder: enseigne solaire d’Abidjan, bordeaux signal, jaune maïs, orange toasté, surfaces ivoire et composition éditoriale décalée.
 const products = [
@@ -29,10 +29,11 @@ export default function Home() {
   const [category, setCategory] = useState<"Panini" | "Chawarma">("Panini");
   const [cart, setCart] = useState<CartItem[]>(readCart);
   const [cartOpen, setCartOpen] = useState(false);
+  const [query, setQuery] = useState("");
 
   useEffect(() => localStorage.setItem("panini-gloire-cart", JSON.stringify(cart)), [cart]);
 
-  const visible = products.filter((product) => product.category === category);
+  const visible = products.filter((product) => product.category === category && `${product.name} ${product.description}`.toLowerCase().includes(query.trim().toLowerCase()));
   const total = useMemo(() => cart.reduce((sum, item) => sum + item.price * item.quantity, 0), [cart]);
   const count = useMemo(() => cart.reduce((sum, item) => sum + item.quantity, 0), [cart]);
 
@@ -53,8 +54,8 @@ export default function Home() {
     </section>
 
     <section id="menu" className="menu-section"><div className="section-heading"><div><p className="eyebrow dark">NOTRE CARTE</p><h2>Aujourd’hui, on se régale</h2></div><span className="delivery-note">Paiement à la livraison</span></div>
-      <div className="category-tabs" role="tablist">{(["Panini", "Chawarma"] as const).map((item) => <button key={item} className={category === item ? "active" : ""} onClick={() => setCategory(item)} role="tab" aria-selected={category === item}>{item}{item === "Panini" ? "s" : ""}</button>)}</div>
-      <div className="product-grid">{visible.map((product, index) => <article className="product-card" style={{ "--delay": `${index * 70}ms` } as React.CSSProperties} key={product.id}><div className="product-image" style={{ backgroundImage: `url(${product.image})` }} /><div className="product-info"><div><h3>{product.name}</h3><p>{product.description}</p></div><strong>{formatCFA(product.price)}</strong></div><button className="add-button" onClick={() => { add(product); setCartOpen(true); }}><Plus size={17} /> Ajouter</button></article>)}</div></section>
+      <div className="catalog-tools"><div className="category-tabs" role="tablist">{(["Panini", "Chawarma"] as const).map((item) => <button key={item} className={category === item ? "active" : ""} onClick={() => setCategory(item)} role="tab" aria-selected={category === item}>{item}{item === "Panini" ? "s" : ""}</button>)}</div><label className="search-box"><Search size={17} /><span className="sr-only">Rechercher un produit</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Rechercher dans la carte" /></label></div>
+      <div className="product-grid">{visible.map((product, index) => <article className="product-card" style={{ "--delay": `${index * 70}ms` } as React.CSSProperties} key={product.id}><div className="product-image" style={{ backgroundImage: `url(${product.image})` }} />{cart.find((item) => item.id === product.id)?.quantity ? <span className="quantity-badge">x{cart.find((item) => item.id === product.id)?.quantity}</span> : null}<div className="product-info"><div><h3>{product.name}</h3><p>{product.description}</p></div><strong>{formatCFA(product.price)}</strong></div><button className="add-button" onClick={() => { add(product); setCartOpen(true); }}><Plus size={17} /> Ajouter</button></article>)}</div></section>
 
     {count > 0 && <button type="button" className="cart-bar" onClick={() => setCartOpen(true)} aria-label={`Ouvrir le panier, ${count} article${count > 1 ? "s" : ""}`}><span className="cart-bar-label"><span className="cart-icon"><ShoppingBag size={18} /></span><strong>{count} article{count > 1 ? "s" : ""}</strong><small>dans votre panier</small></span><strong>{formatCFA(total)}</strong></button>}
 
