@@ -240,6 +240,11 @@
 - [x] Mettre à jour brief-marina.md après chaque évolution fonctionnelle ou modification visible.
 - [x] Vérifier que le guide décrit les fonctions disponibles, les limites et les conseils d’utilisation.
 
+## Simplification du guide Marina
+- [x] Retirer les détails techniques sur Netlify, GitHub et les branches du document destiné à Marina.
+- [x] Remplacer ce passage par une consigne simple en cas de modification non visible.
+- [ ] Valider, committer et synchroniser le guide mis à jour.
+
 ## Héros harmonisés et activables depuis le Dashboard
 - [x] Définir un modèle JSON commun aux trois variantes de hero.
 - [x] Conserver une structure identique : surtitre, titre, description, image ou fond, action principale, action secondaire et repères pratiques.
