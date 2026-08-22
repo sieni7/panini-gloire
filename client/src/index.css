@@ -57,7 +57,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .hero-copy h1 { font-family: "Plus Jakarta Sans", sans-serif; font-size: clamp(48px, 7vw, 92px); line-height: .94; letter-spacing: -.075em; max-width: 680px; margin: 28px 0; }
 .hero-copy h1 em { color: var(--maize); font-style: normal; }
 .hero-intro { max-width: 480px; color: #ffeac4; font-size: 18px; line-height: 1.55; }
-.hero-image { width: 44%; min-height: 560px; background: url('/manus-storage/panini-gloire-hero_bb0f133e.jpg') center/cover; }
+.hero-image { width: 44%; min-height: 560px; background: url('/assets/panini-gloire-hero.webp') center/cover; }
 .primary-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--maize); color: var(--burgundy-deep); border-radius: 999px; padding: 15px 22px; font-weight: 900; text-decoration: none; border: 0; cursor: pointer; transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out), background 160ms var(--ease-out); }
 .primary-button:hover { background: #ffd85b; transform: translateY(-3px); box-shadow: 0 10px 24px rgba(244,197,66,.24); }
 .primary-button:active, .add-button:active { transform: scale(.97); }

@@ -4,11 +4,11 @@ import { ArrowRight, ChevronRight, Minus, Plus, ShoppingBag, Sparkles, X } from 
 
 // Style reminder: enseigne solaire d’Abidjan, bordeaux signal, jaune maïs, orange toasté, surfaces ivoire et composition éditoriale décalée.
 const products = [
-  { id: "simple", name: "Panini Simple", description: "Pain toasté, sauce maison", price: 500, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_8b9ca958.jpg" },
-  { id: "viande", name: "Panini Viande", description: "Viande assaisonnée, sauce maison", price: 1000, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_8b9ca958.jpg" },
-  { id: "jambon", name: "Panini Jambon", description: "Jambon, salade et sauce maison", price: 1500, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_8b9ca958.jpg" },
-  { id: "jambon-fromage", name: "Panini Jambon Fromage", description: "Jambon, fromage fondant et sauce maison", price: 2000, category: "Panini", image: "/manus-storage/panini-gloire-panini-simple_8b9ca958.jpg" },
-  { id: "chawarma", name: "Chawarma Poulet", description: "Poulet mariné, salade et sauce blanche", price: 1500, category: "Chawarma", image: "/manus-storage/panini-gloire-chawarma_885df6c0.jpg" },
+  { id: "simple", name: "Panini Simple", description: "Pain toasté, sauce maison", price: 500, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp" },
+  { id: "viande", name: "Panini Viande", description: "Viande assaisonnée, sauce maison", price: 1000, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp" },
+  { id: "jambon", name: "Panini Jambon", description: "Jambon, salade et sauce maison", price: 1500, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp" },
+  { id: "jambon-fromage", name: "Panini Jambon Fromage", description: "Jambon, fromage fondant et sauce maison", price: 2000, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp" },
+  { id: "chawarma", name: "Chawarma Poulet", description: "Poulet mariné, salade et sauce blanche", price: 1500, category: "Chawarma", image: "/assets/panini-gloire-chawarma.webp" },
 ];
 
 type CartItem = (typeof products)[number] & { quantity: number };
