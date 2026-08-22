@@ -99,6 +99,11 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Grille mobile une colonne
+- [ ] Afficher une carte produit par ligne sur les téléphones.
+- [ ] Préserver les layouts tablette et desktop.
+- [ ] Refaire build, commit, push et test responsive.
+
 ## Rupture de stock et retrait sur place
 - [x] Ajouter un état de rupture conservant la photo en couleur.
 - [x] Désactiver et griser le bouton « Ajouter » lorsque le produit est indisponible.
