@@ -100,9 +100,9 @@
 - [x] Valider le build et le rendu responsive.
 
 ## Grille mobile une colonne
-- [ ] Afficher une carte produit par ligne sur les téléphones.
-- [ ] Préserver les layouts tablette et desktop.
-- [ ] Refaire build, commit, push et test responsive.
+- [x] Afficher une carte produit par ligne sur les téléphones.
+- [x] Préserver les layouts tablette et desktop.
+- [x] Refaire build, commit, push et test responsive.
 
 ## Rupture de stock et retrait sur place
 - [x] Ajouter un état de rupture conservant la photo en couleur.
