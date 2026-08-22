@@ -100,10 +100,10 @@
 - [x] Valider le build et le rendu responsive.
 
 ## Règle de synchronisation locale et distante
-- [ ] Vérifier l’état local et la branche GitHub avant chaque livraison.
-- [ ] Exécuter `pnpm run check` et `pnpm run build` localement.
-- [ ] Créer un commit local descriptif.
-- [ ] Pousser le commit vers GitHub `main` et vérifier l’alignement.
+- [x] Vérifier l’état local et la branche GitHub avant chaque livraison.
+- [x] Exécuter `pnpm run check` et `pnpm run build` localement.
+- [x] Créer un commit local descriptif.
+- [x] Pousser le commit vers GitHub `main` et vérifier l’alignement.
 
 ## Réalignement chromatique demandé
 - [ ] Remplacer toutes les références vertes par jaune foncé, orangé et rouge/bordeaux.
