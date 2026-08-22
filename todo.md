@@ -99,6 +99,10 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Correction du monogramme
+- [x] Remplacer le monogramme SG par PG.
+- [ ] Refaire build, commit et push.
+
 ## Remplacement du logo
 - [x] Remplacer le logo image par un symbole rouge de pain ou les initiales SG.
 - [x] Vérifier l’affichage desktop et mobile.
