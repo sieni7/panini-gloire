@@ -99,6 +99,13 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Dashboard Marina
+- [ ] Relier Home aux fichiers `products.json` et `site.json` pour rendre les publications visibles.
+- [ ] Auditer le dashboard existant et sa protection PIN.
+- [ ] Modifier produits, prix, descriptions et disponibilité.
+- [ ] Prévoir le remplacement des photos et l’édition des informations générales.
+- [ ] Tester le flux de publication GitHub et refaire build, commit, push.
+
 ## Grille mobile une colonne
 - [x] Afficher une carte produit par ligne sur les téléphones.
 - [x] Préserver les layouts tablette et desktop.

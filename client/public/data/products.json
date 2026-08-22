@@ -7,7 +7,7 @@
     "category": "Panini",
     "available": true,
     "sortOrder": 1,
-    "image": "/images/panini-simple.jpg"
+    "image": "/assets/panini-gloire-panini-simple.webp"
   },
   {
     "id": "viande",
@@ -17,7 +17,8 @@
     "category": "Panini",
     "available": true,
     "sortOrder": 2,
-    "image": "/images/panini-viande.jpg"
+    "image": "/assets/panini-gloire-panini-simple.webp",
+    "badge": "HOT!"
   },
   {
     "id": "jambon",
@@ -27,7 +28,7 @@
     "category": "Panini",
     "available": true,
     "sortOrder": 3,
-    "image": "/images/panini-jambon.jpg"
+    "image": "/assets/panini-gloire-panini-simple.webp"
   },
   {
     "id": "jambon-fromage",
@@ -37,7 +38,7 @@
     "category": "Panini",
     "available": true,
     "sortOrder": 4,
-    "image": "/images/panini-jambon-fromage.jpg"
+    "image": "/assets/panini-gloire-panini-simple.webp"
   },
   {
     "id": "chawarma",
@@ -47,6 +48,6 @@
     "category": "Chawarma",
     "available": true,
     "sortOrder": 5,
-    "image": "/images/chawarma-poulet.jpg"
+    "image": "/assets/panini-gloire-chawarma.webp"
   }
 ]

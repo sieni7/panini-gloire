@@ -3,15 +3,20 @@ import { Link } from "wouter";
 import { ArrowRight, ChevronRight, Minus, Plus, Search, ShoppingBag, Sparkles, X } from "lucide-react";
 
 // Style reminder: enseigne solaire d’Abidjan, bordeaux signal, jaune maïs, orange toasté, surfaces ivoire et composition éditoriale décalée.
-const products = [
-  { id: "simple", name: "Panini Simple", description: "Pain toasté, sauce maison", price: 500, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp", available: true },
-  { id: "viande", name: "Panini Viande", description: "Viande assaisonnée, sauce maison", price: 1000, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp", badge: "HOT!" },
-  { id: "jambon", name: "Panini Jambon", description: "Jambon, salade et sauce maison", price: 1500, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp", available: true },
-  { id: "jambon-fromage", name: "Panini Jambon Fromage", description: "Jambon, fromage fondant et sauce maison", price: 2000, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp", available: true },
-  { id: "chawarma", name: "Chawarma Poulet", description: "Poulet mariné, salade et sauce blanche", price: 1500, category: "Chawarma", image: "/assets/panini-gloire-chawarma.webp", available: true },
+type Product = { id: string; name: string; description: string; price: number; category: "Panini" | "Chawarma"; image: string; available?: boolean; badge?: string; sortOrder?: number };
+type Site = { brandName: string; locationLabel: string; address: string; phone: string; heroEyebrow: string; heroTitle: string; heroDescription: string; serviceNote: string; openingHours: string; deliveryNote: string; whatsappTemplate: string };
+
+const fallbackProducts: Product[] = [
+  { id: "simple", name: "Panini Simple", description: "Pain toasté, sauce maison", price: 500, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp", available: true, sortOrder: 1 },
+  { id: "viande", name: "Panini Viande", description: "Viande assaisonnée, sauce maison", price: 1000, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp", badge: "HOT!", available: true, sortOrder: 2 },
+  { id: "jambon", name: "Panini Jambon", description: "Jambon, salade et sauce maison", price: 1500, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp", available: true, sortOrder: 3 },
+  { id: "jambon-fromage", name: "Panini Jambon Fromage", description: "Jambon, fromage fondant et sauce maison", price: 2000, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp", available: true, sortOrder: 4 },
+  { id: "chawarma", name: "Chawarma Poulet", description: "Poulet mariné, salade et sauce blanche", price: 1500, category: "Chawarma", image: "/assets/panini-gloire-chawarma.webp", available: true, sortOrder: 5 },
 ];
 
-type CartItem = (typeof products)[number] & { quantity: number };
+const fallbackSite: Site = { brandName: "Panini de la Gloire", locationLabel: "ADJAMÉ BINGERVILLE • EN FACE DE BONPRIX", address: "Adjamé Bingerville • En face de BonPrix", phone: "+2250574971022", heroEyebrow: "FAIT MINUTE, LIVRÉ AVEC LE SOURIRE", heroTitle: "La pause qui mérite une ovation.", heroDescription: "Choisissez votre recette, composez votre panier et confirmez votre commande directement sur WhatsApp.", serviceNote: "Paiement à la livraison", openingHours: "Tous les jours · 10h00 — 22h00", deliveryNote: "Livraison selon zone et disponibilité", whatsappTemplate: "Nouvelle commande — Panini de la Gloire" };
+
+type CartItem = Product & { quantity: number };
 
 const readCart = (): CartItem[] => {
   try {
@@ -27,17 +32,20 @@ const formatCFA = (value: number) => `${new Intl.NumberFormat("fr-FR").format(va
 
 export default function Home() {
   const [category, setCategory] = useState<"Panini" | "Chawarma">("Panini");
+  const [products, setProducts] = useState<Product[]>(fallbackProducts);
+  const [site, setSite] = useState<Site>(fallbackSite);
   const [cart, setCart] = useState<CartItem[]>(readCart);
   const [cartOpen, setCartOpen] = useState(false);
   const [query, setQuery] = useState("");
 
-  useEffect(() => localStorage.setItem("panini-gloire-cart", JSON.stringify(cart)), [cart]);
+  useEffect(() => { localStorage.setItem("panini-gloire-cart", JSON.stringify(cart)); }, [cart]);
+  useEffect(() => { void Promise.all([fetch("/data/products.json").then((response) => response.ok ? response.json() : Promise.reject(response.status)), fetch("/data/site.json").then((response) => response.ok ? response.json() : Promise.reject(response.status))]).then(([nextProducts, nextSite]) => { if (Array.isArray(nextProducts)) setProducts(nextProducts); if (nextSite && typeof nextSite === "object") setSite(nextSite); }).catch(() => undefined); }, []);
 
   const visible = products.filter((product) => product.category === category && `${product.name} ${product.description}`.toLowerCase().includes(query.trim().toLowerCase()));
   const total = useMemo(() => cart.reduce((sum, item) => sum + item.price * item.quantity, 0), [cart]);
   const count = useMemo(() => cart.reduce((sum, item) => sum + item.quantity, 0), [cart]);
 
-  const add = (product: (typeof products)[number]) => { if (product.available === false) return; setCart((current) => {
+  const add = (product: Product) => { if (product.available === false) return; setCart((current) => {
     const existing = current.find((item) => item.id === product.id);
     return existing ? current.map((item) => item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item) : [...current, { ...product, quantity: 1 }];
   }); };
@@ -45,15 +53,15 @@ export default function Home() {
 
   return <main className="min-h-screen pb-28">
     <header className="site-header">
-      <div className="header-inner"><Link href="/" className="brand-lockup"><span className="brand-mark brand-sg" role="img" aria-label="Logo Panini de la Gloire">PG</span><span className="brand-copy"><strong>PANINI DE LA GLOIRE</strong><small>ADJAMÉ BINGERVILLE • EN FACE DE BONPRIX</small></span></Link><Link href="/commande" className="account-link">Commander <ArrowRight size={16} /></Link></div>
+      <div className="header-inner"><Link href="/" className="brand-lockup"><span className="brand-mark brand-sg" role="img" aria-label="Logo Panini de la Gloire">PG</span><span className="brand-copy"><strong>{site.brandName.toUpperCase()}</strong><small>{site.locationLabel}</small></span></Link><Link href="/commande" className="account-link">Commander <ArrowRight size={16} /></Link></div>
     </header>
 
     <section className="hero-shell">
-      <div className="hero-copy"><p className="eyebrow"><Sparkles size={15} /> FAIT MINUTE, LIVRÉ AVEC LE SOURIRE</p><h1>La pause qui<br /><em>mérite une ovation.</em></h1><p className="hero-intro">Choisissez votre recette, composez votre panier et confirmez votre commande directement sur WhatsApp.</p><a className="primary-button" href="#menu">Voir le menu <ChevronRight size={19} /></a></div>
+      <div className="hero-copy"><p className="eyebrow"><Sparkles size={15} /> {site.heroEyebrow}</p><h1>{site.heroTitle.split(" mérite")[0]}<br /><em>mérite une ovation.</em></h1><p className="hero-intro">{site.heroDescription}</p><a className="primary-button" href="#menu">Voir le menu <ChevronRight size={19} /></a></div>
       <div className="hero-image" role="img" aria-label="Panini fraîchement toasté" />
     </section>
 
-    <section id="menu" className="menu-section"><div className="section-heading"><div><p className="eyebrow dark">NOTRE CARTE</p><h2>Aujourd’hui, on se régale</h2></div><span className="delivery-note">Paiement à la livraison</span></div>
+    <section id="menu" className="menu-section"><div className="section-heading"><div><p className="eyebrow dark">NOTRE CARTE</p><h2>Aujourd’hui, on se régale</h2></div><span className="delivery-note">{site.serviceNote}</span></div>
       <div className="catalog-tools"><div className="category-tabs" role="tablist">{(["Panini", "Chawarma"] as const).map((item) => <button key={item} className={category === item ? "active" : ""} onClick={() => setCategory(item)} role="tab" aria-selected={category === item}>{item}{item === "Panini" ? "s" : ""}</button>)}</div><label className="search-box"><Search size={17} /><span className="sr-only">Rechercher un produit</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Rechercher dans la carte" /></label></div>
       <div className="product-grid">{visible.map((product, index) => <article className="product-card" style={{ "--delay": `${index * 70}ms` } as React.CSSProperties} key={product.id}><div className="product-image" style={{ backgroundImage: `url(${product.image})` }} />{product.badge ? <span className="product-badge">{product.badge}</span> : null}{product.available === false ? <span className="stock-badge">RUPTURE</span> : null}{cart.find((item) => item.id === product.id)?.quantity ? <span className="quantity-badge">x{cart.find((item) => item.id === product.id)?.quantity}</span> : null}<div className="product-info"><div><h3>{product.name}</h3><p>{product.description}</p></div><strong>{formatCFA(product.price)}</strong></div><button className={`add-button ${product.available === false ? "is-disabled" : ""}`} disabled={product.available === false} onClick={() => { add(product); setCartOpen(true); }}>{product.available === false ? "Rupture de stock" : <><Plus size={17} /> Ajouter</>}</button></article>)}</div></section>
 
