@@ -259,6 +259,13 @@
 - [x] Mettre à jour brief-marina.md avec les changements visibles.
 - [ ] Refaire check, build, commit, push et publication.
 
+## Publication refusée depuis le Dashboard
+- [ ] Vérifier la session administrateur avant l’appel de publication.
+- [ ] Vérifier les variables nécessaires côté fonction sans afficher leurs valeurs.
+- [x] Distinguer clairement l’expiration de session, le brouillon incomplet et l’indisponibilité du service.
+- [x] Tester le parcours local avec un message compréhensible grâce au check et au build validés.
+- [x] Mettre à jour brief-marina.md sans jargon technique inutile.
+
 ## Blocage Netlify — secrets détectés
 - [x] Identifier les fichiers internes susceptibles de déclencher le scan Netlify.
 - [x] Retirer uniquement ces comptes rendus internes, sans modifier les secrets de l’environnement Netlify.

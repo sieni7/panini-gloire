@@ -42,7 +42,7 @@ Dans la carte **Votre lien de commande**, les boutons permettent de copier le li
 
 Pour une modification importante, vérifiez d’abord le brouillon, puis la publication et enfin le site public. Si un changement n’apparaît pas tout de suite, actualisez la page après quelques instants.
 
-Après chaque publication, ouvrez le site public et vérifiez que la modification apparaît correctement. Si elle n’est pas visible tout de suite, actualisez la page après quelques instants. Si le problème continue, ne republiez pas plusieurs fois le même changement et ne modifiez pas le code d’accès : envoyez-moi simplement une capture d’écran sans information confidentielle et décrivez ce que vous observez.
+Après chaque publication, ouvrez le site public et vérifiez que la modification apparaît correctement. Si elle n’est pas visible tout de suite, actualisez la page après quelques instants. Si le dashboard affiche « Publication refusée », reconnectez-vous à l’espace privé puis réessayez une seule fois. Si le message revient, ne modifiez pas le code d’accès et ne republiez pas plusieurs fois le même changement : envoyez-moi simplement une capture d’écran sans information confidentielle et décrivez ce que vous observez.
 
 ## 4. Ce que l’application ne fait pas encore
 
