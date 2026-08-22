@@ -24,13 +24,13 @@ Ils peuvent ensuite indiquer leur nom et leur numéro de téléphone, puis chois
 
 ## 3. Ce que Marina peut gérer dans l’espace privé
 
-L’espace privé s’ouvre depuis l’adresse `/dashboard`. Son en-tête affiche **ESPACE PRIVÉ** et **CONFIGURATION**. Les rubriques sont présentées dans cet ordre : **Produits**, **Catégories**, puis **Informations du site**. Une rubrique **Documentation** est également disponible dans la barre latérale : elle regroupe le guide pratique et la FAQ, sans qu’il soit nécessaire de quitter l’espace privé. Les accès **Informations du site** et **Voir le site** restent toujours visibles pour revenir rapidement aux réglages ou ouvrir la carte publique.
+L’espace privé s’ouvre depuis l’adresse `/dashboard`. Son en-tête affiche **ESPACE PRIVÉ** et **CONFIGURATION**. Les rubriques sont présentées dans cet ordre : **Produits**, **Catégories**, puis **Informations de l’application**. Une rubrique **Documentation** est également disponible dans la barre latérale : elle regroupe le guide pratique et la FAQ, sans qu’il soit nécessaire de quitter l’espace privé. Les accès **Informations de l’application** et **Voir l’application** restent toujours visibles pour revenir rapidement aux réglages ou ouvrir l’application publique.
 
 Dans le dashboard, Marina peut modifier les informations du catalogue : le nom d’un produit, sa description, son prix et sa disponibilité. Lorsqu’un produit est indisponible, sa photo reste visible, mais le bouton **Ajouter** devient grisé et ne peut plus être utilisé.
 
 Marina peut aussi remplacer la photo d’un produit et modifier les informations visibles du site : le nom de l’enseigne, la localisation, le numéro WhatsApp, les horaires, le texte d’accueil et les indications de service. Dans la fiche du produit, une miniature affiche la photo actuelle. Elle se rafraîchit immédiatement après le choix d’une nouvelle image, avant l’enregistrement du brouillon.
 
-Dans **Informations du site**, Marina peut choisir le hero affiché sur la page d’accueil. Les trois choix sont présentés sous la même forme : **Chaud & gourmand**, **Street food moderne** et **Carte postale d’Abidjan**. Un seul choix est actif à la fois. Il suffit de sélectionner le hero souhaité, d’enregistrer le brouillon, puis de préparer la publication. Si aucune valeur correcte n’est publiée, le site conserve automatiquement le hero de secours actuel.
+Dans **Informations de l’application**, Marina peut choisir le hero affiché sur la page d’accueil. Les trois choix sont présentés sous la même forme : **Chaud & gourmand**, **Street food moderne** et **Carte postale d’Abidjan**. Un seul choix est actif à la fois. Il suffit de sélectionner le hero souhaité, d’enregistrer le brouillon, puis de préparer la publication. Si aucune valeur correcte n’est publiée, le site conserve automatiquement le hero de secours actuel.
 
 Les changements peuvent d’abord être enregistrés comme brouillon. La publication est ensuite préparée pour mettre à jour les fichiers du site. Après une publication, il faut vérifier le site public pour confirmer que la modification apparaît correctement.
 

@@ -259,6 +259,12 @@
 - [x] Mettre à jour brief-marina.md avec les changements visibles.
 - [ ] Refaire check, build, commit, push et publication.
 
+## Harmonisation des libellés de l’application
+- [x] Remplacer « Informations du site » par « Informations de l’application » partout où c’est visible.
+- [x] Remplacer « Voir le site » par « Voir l’application » partout où c’est visible.
+- [x] Mettre à jour brief-marina.md et vérifier les autres textes du Dashboard.
+- [ ] Refaire check, build, commit, push et publication.
+
 ## Accès persistants du Dashboard
 - [x] Garder « Informations du site » visible en permanence dans la sidebar.
 - [x] Garder « Voir le site » accessible en permanence dans l’en-tête.
