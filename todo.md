@@ -99,6 +99,11 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Plan d’actions fonctionnalités
+- [ ] Corriger les étapes qui ne correspondent pas au fonctionnement JSON actuel.
+- [ ] Définir un ordre d’ajout sûr pour partage, QR code et gestion du menu.
+- [ ] Préciser les tests avant chaque synchronisation et publication.
+
 ## Incident build Netlify
 - [ ] Examiner le journal ou message d’erreur du build.
 - [ ] Corriger la cause dans le projet.
