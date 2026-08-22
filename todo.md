@@ -259,6 +259,19 @@
 - [x] Mettre à jour brief-marina.md avec les changements visibles.
 - [ ] Refaire check, build, commit, push et publication.
 
+## Blocage Netlify — secrets détectés
+- [x] Identifier les fichiers internes susceptibles de déclencher le scan Netlify.
+- [x] Retirer uniquement ces comptes rendus internes, sans modifier les secrets de l’environnement Netlify.
+- [x] Refaire le check et le build local.
+- [ ] Pousser un commit propre et vérifier le déploiement public.
+- [ ] Mettre à jour brief-marina.md avec une consigne simple, sans jargon.
+
+## Ancienne version toujours servie par le site public
+- [ ] Documenter la capture confirmant « ESPACE ÉDITORIAL », « Le comptoir de Marina » et l’ancien ordre.
+- [ ] Comparer le commit publié avec la version locale et GitHub.
+- [ ] Relancer ou corriger le déploiement réellement lié au domaine public.
+- [ ] Recontrôler le dashboard après déploiement.
+
 ## Blocage Netlify confirmé par contrôle visuel
 - [ ] Identifier le site Netlify réellement lié au domaine public.
 - [ ] Comparer son dernier déploiement avec le commit GitHub `f60c6a5`.
