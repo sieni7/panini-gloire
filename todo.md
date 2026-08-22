@@ -99,6 +99,11 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Badge produit demandé
+- [ ] Ajouter le badge jaune « HOT! » sur Panini Viande.
+- [ ] Vérifier l’affichage mobile et desktop.
+- [ ] Refaire build, commit et push.
+
 ## Sprint 2 — Catalogue et navigation
 - [x] Ajouter une recherche simple au catalogue.
 - [x] Rendre la navigation des catégories plus pratique sur mobile.

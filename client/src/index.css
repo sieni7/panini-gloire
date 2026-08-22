@@ -77,6 +77,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .product-card { position: relative; background: rgba(255,255,255,.52); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; box-shadow: 0 12px 28px rgba(84,20,38,.06); animation: rise 500ms var(--ease-out) both; animation-delay: var(--delay); }
 .product-image { aspect-ratio: 1.12; background-position: center; background-size: cover; }
+.product-badge { position: absolute; top: 12px; left: 12px; padding: 7px 10px; border-radius: 5px; background: var(--maize); color: var(--burgundy-deep); font-size: 11px; font-weight: 950; letter-spacing: .08em; box-shadow: 0 5px 14px rgba(84,20,38,.18); }
 .quantity-badge { position: absolute; top: 12px; right: 12px; min-width: 38px; padding: 7px 9px; border-radius: 999px; background: var(--maize); color: var(--burgundy-deep); font-weight: 950; text-align: center; box-shadow: 0 5px 14px rgba(84,20,38,.18); }
 .product-info { padding: 17px 17px 0; display: flex; justify-content: space-between; gap: 10px; }
 .product-info h3 { margin: 0; color: var(--cacao); font-family: "Plus Jakarta Sans", sans-serif; font-size: 17px; }
