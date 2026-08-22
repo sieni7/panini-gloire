@@ -38,6 +38,8 @@ Dans la carte **Votre lien de commande**, les boutons permettent de copier le li
 
 Pour une modification importante, vérifiez d’abord le brouillon, puis la publication et enfin le site public. Si un changement n’apparaît pas tout de suite, actualisez la page après quelques instants.
 
+Lors du dernier contrôle, l’accès au dashboard public fonctionnait, mais le site Netlify affichait encore les anciens intitulés **ESPACE ÉDITORIAL**, **Le comptoir de Marina** et l’ancien ordre des rubriques. Le dépôt GitHub contient bien la version corrigée. Il faut donc vérifier la liaison entre Netlify, le dépôt `sieni7/panini-gloire` et la branche `main` avant de considérer cette modification comme visible pour les clients.
+
 ## 4. Ce que l’application ne fait pas encore
 
 Pour éviter toute confusion, voici les limites actuelles :

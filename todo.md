@@ -240,6 +240,11 @@
 - [x] Mettre à jour brief-marina.md après chaque évolution fonctionnelle ou modification visible.
 - [x] Vérifier que le guide décrit les fonctions disponibles, les limites et les conseils d’utilisation.
 
+## Écart de déploiement à résoudre
+- [ ] Vérifier pourquoi Netlify affiche encore les anciens libellés du dashboard.
+- [x] Confirmer que le dépôt local et GitHub utilisent bien la branche main actuelle ; la liaison Netlify reste à vérifier.
+- [ ] Mettre à jour brief-marina.md avec l’état réel avant toute nouvelle livraison.
+
 ## Ajustements dashboard privé demandés
 - [x] Remplacer « ESPACE ÉDITORIAL » par « ESPACE PRIVÉ ».
 - [x] Remplacer « Le comptoir de Marina » par « CONFIGURATION ».
