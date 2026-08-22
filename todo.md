@@ -5,3 +5,6 @@
 - [x] Mettre à jour les rappels de style dans les fichiers CSS et composants.
 - [x] Vérifier le rendu desktop et mobile après la refonte.
 - [x] Rejouer lint, vérification TypeScript et build après correction JSX et palette.
+
+- [ ] Synchroniser le projet React vers la branche main existante du dépôt GitHub après comparaison finale.
+- [ ] Vérifier que la copie Windows peut être resynchronisée sans mélanger l’ancien projet Next.js.
