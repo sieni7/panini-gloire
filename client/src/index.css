@@ -266,6 +266,11 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .hero-choice small { margin-top: 5px; color: var(--muted); font-size: 11px; line-height: 1.35; }
 .admin-form-heading { display: flex; justify-content: space-between; align-items: start; padding-bottom: 13px; border-bottom: 1px solid var(--line); }
 .admin-form-heading h3 { font-family: "Plus Jakarta Sans", sans-serif; font-size: 27px; letter-spacing: -.06em; margin: 8px 0 0; }
+.product-preview { display: flex; align-items: center; gap: 13px; padding: 10px; border-radius: 14px; background: #fff4cb; border: 1px solid rgba(125,31,53,.14); }
+.product-preview img { width: 82px; height: 68px; object-fit: cover; border-radius: 10px; background: #f3dfad; flex: 0 0 auto; }
+.product-preview strong, .product-preview span { display: block; }
+.product-preview strong { color: var(--cacao); font-size: 13px; }
+.product-preview span { margin-top: 4px; color: var(--muted); font-size: 12px; line-height: 1.4; }
 .admin-form-card label, .site-form-card label { color: var(--cacao); font-weight: 800; font-size: 13px; }
 .admin-form-card input:not([type="checkbox"]), .admin-form-card textarea, .admin-form-card select, .site-form-card input, .site-form-card textarea { display: block; width: 100%; margin-top: 7px; padding: 12px 13px; border: 1px solid var(--line); border-radius: 11px; background: #fffaf0; color: var(--cacao); outline: none; }
 .admin-form-card input:focus, .admin-form-card textarea:focus, .admin-form-card select:focus, .site-form-card input:focus, .site-form-card textarea:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(237,125,49,.13); }

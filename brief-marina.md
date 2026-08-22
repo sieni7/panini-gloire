@@ -28,7 +28,7 @@ L’espace privé s’ouvre depuis l’adresse `/dashboard`. Son en-tête affich
 
 Dans le dashboard, Marina peut modifier les informations du catalogue : le nom d’un produit, sa description, son prix et sa disponibilité. Lorsqu’un produit est indisponible, sa photo reste visible, mais le bouton **Ajouter** devient grisé et ne peut plus être utilisé.
 
-Marina peut aussi remplacer la photo d’un produit et modifier les informations visibles du site : le nom de l’enseigne, la localisation, le numéro WhatsApp, les horaires, le texte d’accueil et les indications de service.
+Marina peut aussi remplacer la photo d’un produit et modifier les informations visibles du site : le nom de l’enseigne, la localisation, le numéro WhatsApp, les horaires, le texte d’accueil et les indications de service. Dans la fiche du produit, une miniature affiche la photo actuelle. Elle se rafraîchit immédiatement après le choix d’une nouvelle image, avant l’enregistrement du brouillon.
 
 Dans **Informations du site**, Marina peut choisir le hero affiché sur la page d’accueil. Les trois choix sont présentés sous la même forme : **Chaud & gourmand**, **Street food moderne** et **Carte postale d’Abidjan**. Un seul choix est actif à la fois. Il suffit de sélectionner le hero souhaité, d’enregistrer le brouillon, puis de préparer la publication. Si aucune valeur correcte n’est publiée, le site conserve automatiquement le hero de secours actuel.
 

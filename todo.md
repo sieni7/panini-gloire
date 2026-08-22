@@ -259,6 +259,12 @@
 - [x] Mettre à jour brief-marina.md avec les changements visibles.
 - [ ] Refaire check, build, commit, push et publication.
 
+## Amélioration de la fiche produit du Dashboard
+- [x] Simplifier les explications visibles pour Marina.
+- [x] Ajouter une miniature dans la fiche de modification du produit.
+- [x] Rafraîchir immédiatement la miniature après sélection d’une nouvelle photo.
+- [x] Mettre à jour brief-marina.md, puis valider et synchroniser.
+
 ## Ajustement du libellé du login
 - [x] Remplacer « site » par « application » uniquement dans `/dashboard/login`.
 - [x] Vérifier le guide Marina : le libellé n’y est pas mentionné.
