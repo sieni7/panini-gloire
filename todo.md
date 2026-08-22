@@ -99,6 +99,11 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Étape 2 — Lien public dans le dashboard
+- [x] Ajouter une carte « Votre lien de commande ».
+- [x] Ajouter un bouton pour copier l’adresse publique.
+- [x] Vérifier le dashboard, le build, le commit et le push.
+
 ## Étape 1 — Partage du lien côté client
 - [ ] Ajouter le bouton Partager dans l’en-tête.
 - [ ] Prévoir la copie du lien si le partage natif n’est pas disponible.
