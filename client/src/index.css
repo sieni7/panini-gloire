@@ -50,6 +50,12 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .brand-copy small { order: 2; color: var(--burgundy); font-size: 10px; font-weight: 900; letter-spacing: .13em; line-height: 1.2; }
 .account-link { display: inline-flex; align-items: center; gap: 8px; color: var(--burgundy); border: 1px solid rgba(125,31,53,.25); border-radius: 999px; padding: 11px 16px; font-weight: 800; text-decoration: none; transition: transform 160ms var(--ease-out), background 160ms var(--ease-out); }
 .account-link:hover { background: #fff1bf; transform: translateY(-2px); }
+.header-actions { display: inline-flex; align-items: center; gap: 10px; }
+.share-button { display: inline-flex; align-items: center; gap: 7px; border: 1px solid rgba(125,31,53,.25); border-radius: 999px; padding: 11px 14px; background: transparent; color: var(--burgundy); font-weight: 850; cursor: pointer; transition: transform 160ms var(--ease-out), background 160ms var(--ease-out); }
+.share-button:hover { background: #fff1bf; transform: translateY(-2px); }
+.share-button:active { transform: scale(.97); }
+.share-feedback { position: fixed; top: 86px; right: 28px; z-index: 40; margin: 0; padding: 10px 14px; border-radius: 999px; background: var(--burgundy); color: var(--cream); font-size: 13px; font-weight: 850; box-shadow: 0 12px 28px rgba(84,20,38,.18); }
+@media (max-width: 640px) { .header-inner { padding: 14px 16px; } .brand-copy strong { font-size: 16px; } .brand-copy small { font-size: 8px; } .header-actions { gap: 6px; } .share-button { padding: 10px; } .share-button span { display: none; } .account-link { padding: 10px; } .account-link { font-size: 0; } .account-link svg { width: 18px; height: 18px; } .share-feedback { top: 76px; right: 16px; } }
 
 .hero-shell { max-width: 1180px; min-height: 560px; margin: 48px auto 0; border-radius: 34px; overflow: hidden; position: relative; display: flex; align-items: stretch; background: var(--burgundy); box-shadow: 0 24px 70px rgba(84,20,38,.18); }
 .hero-copy { width: 56%; padding: 78px 56px; color: var(--cream); position: relative; z-index: 2; background: linear-gradient(120deg, var(--red-deep), var(--red) 62%, rgba(167,45,36,.78)); }

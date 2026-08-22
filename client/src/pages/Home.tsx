@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
-import { ArrowRight, ChevronRight, Minus, Plus, Search, ShoppingBag, Sparkles, X } from "lucide-react";
+import { ArrowRight, ChevronRight, Minus, Plus, Search, Share2, ShoppingBag, Sparkles, X } from "lucide-react";
 
 // Style reminder: enseigne solaire d’Abidjan, bordeaux signal, jaune maïs, orange toasté, surfaces ivoire et composition éditoriale décalée.
 type Product = { id: string; name: string; description: string; price: number; category: "Panini" | "Chawarma"; image: string; available?: boolean; badge?: string; sortOrder?: number };
@@ -37,6 +37,7 @@ export default function Home() {
   const [cart, setCart] = useState<CartItem[]>(readCart);
   const [cartOpen, setCartOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [shareMessage, setShareMessage] = useState("");
 
   useEffect(() => { localStorage.setItem("panini-gloire-cart", JSON.stringify(cart)); }, [cart]);
   useEffect(() => { void Promise.all([fetch("/data/products.json").then((response) => response.ok ? response.json() : Promise.reject(response.status)), fetch("/data/site.json").then((response) => response.ok ? response.json() : Promise.reject(response.status))]).then(([nextProducts, nextSite]) => { if (Array.isArray(nextProducts)) setProducts(nextProducts); if (nextSite && typeof nextSite === "object") setSite(nextSite); }).catch(() => undefined); }, []);
@@ -50,10 +51,24 @@ export default function Home() {
     return existing ? current.map((item) => item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item) : [...current, { ...product, quantity: 1 }];
   }); };
   const changeQuantity = (id: string, delta: number) => setCart((current) => current.map((item) => item.id === id ? { ...item, quantity: item.quantity + delta } : item).filter((item) => item.quantity > 0));
+  const shareSite = async () => {
+    const shareData = { title: site.brandName, text: "Découvrez la carte de Panini de la Gloire", url: window.location.origin };
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+        return;
+      }
+      await navigator.clipboard.writeText(shareData.url);
+      setShareMessage("Lien copié");
+    } catch {
+      setShareMessage("Partage annulé");
+    }
+    window.setTimeout(() => setShareMessage(""), 2200);
+  };
 
   return <main className="min-h-screen pb-28">
     <header className="site-header">
-      <div className="header-inner"><Link href="/" className="brand-lockup"><span className="brand-mark brand-sg" role="img" aria-label="Logo Panini de la Gloire">PG</span><span className="brand-copy"><strong>{site.brandName.toUpperCase()}</strong><small>{site.locationLabel}</small></span></Link><Link href="/commande" className="account-link">Commander <ArrowRight size={16} /></Link></div>
+      <div className="header-inner"><Link href="/" className="brand-lockup"><span className="brand-mark brand-sg" role="img" aria-label="Logo Panini de la Gloire">PG</span><span className="brand-copy"><strong>{site.brandName.toUpperCase()}</strong><small>{site.locationLabel}</small></span></Link><div className="header-actions"><button type="button" className="share-button" onClick={shareSite} aria-label="Partager le lien du site"><Share2 size={17} /><span>Partager</span></button><Link href="/commande" className="account-link">Commander <ArrowRight size={16} /></Link></div></div>{shareMessage && <p className="share-feedback" role="status">{shareMessage}</p>}
     </header>
 
     <section className="hero-shell">

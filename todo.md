@@ -99,6 +99,16 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Étape 1 — Partage du lien côté client
+- [ ] Ajouter le bouton Partager dans l’en-tête.
+- [ ] Prévoir la copie du lien si le partage natif n’est pas disponible.
+- [ ] Vérifier mobile, ordinateur, build, commit et push.
+
+## Étape suivante — Partage du lien côté client
+- [x] Ajouter un bouton Partager dans l’en-tête.
+- [x] Prévoir la copie du lien sur les appareils non compatibles.
+- [x] Tester le parcours, puis build, commit et push.
+
 ## Plan d’actions fonctionnalités
 - [ ] Corriger les étapes qui ne correspondent pas au fonctionnement JSON actuel.
 - [ ] Définir un ordre d’ajout sûr pour partage, QR code et gestion du menu.
