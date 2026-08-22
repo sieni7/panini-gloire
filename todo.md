@@ -99,6 +99,12 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Étape 4 — Édition sûre des produits
+- [ ] Vérifier les champs obligatoires du formulaire produit.
+- [ ] Valider le prix, la catégorie et la disponibilité sans modifier l’identifiant.
+- [ ] Afficher un retour clair avant l’enregistrement du brouillon.
+- [ ] Refaire build, commit, push et test du dashboard.
+
 ## Étape 3 — QR code du site public
 - [x] Ajouter un QR code vers le site public.
 - [x] Ajouter agrandissement et téléchargement PNG.
