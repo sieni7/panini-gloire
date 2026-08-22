@@ -25,3 +25,23 @@
 
 - [x] Retirer l’import résiduel du plugin JSX dans vite.config.ts.
 - [x] Refaire le build après nettoyage de la configuration Vite.
+
+- [ ] Décider si le catalogue JSON statique suffit au périmètre réel.
+- [ ] Définir une stratégie de stockage des images compatible avec Netlify.
+- [ ] Ne pas utiliser un fichier JSON comme base de commandes persistante sans backend adapté.
+
+- [ ] Définir les champs éditables des produits et des informations générales.
+- [ ] Choisir un stockage persistant pour les textes, photos et réglages du dashboard.
+- [ ] Prévoir authentification, validation et journal des modifications administratives.
+
+- [ ] Créer le catalogue éditorial products.json et le fichier site.json.
+- [ ] Construire une vue dashboard avec édition, aperçu et validation.
+- [ ] Définir l’authentification et le mécanisme de publication GitHub sans exposer de token au navigateur.
+
+- [ ] Créer les fichiers JSON éditoriaux pour le dashboard confirmé.
+- [ ] Ajouter la fonction Netlify de publication GitHub avec secret serveur.
+- [ ] Configurer les variables Netlify sans exposer le token GitHub.
+
+- [ ] Stocker le PIN Marina uniquement dans une variable secrète Netlify.
+- [ ] Ajouter une session admin temporaire côté serveur.
+- [ ] Refuser toute publication GitHub sans session admin valide.
