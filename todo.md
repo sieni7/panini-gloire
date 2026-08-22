@@ -99,6 +99,11 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Champ PIN à quatre cases
+- [x] Remplacer le champ unique par 4 cases numériques.
+- [x] Ajouter le passage automatique et la gestion du retour arrière.
+- [x] Refaire build, commit, push et test du login.
+
 ## Refonte login dashboard
 - [x] Reprendre le titre « CONFIGURATION » et le texte de la maquette.
 - [x] Refaire le champ PIN, le bouton jaune et le lien de retour.

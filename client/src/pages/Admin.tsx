@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "wouter";
 import { Check, Copy, Download, Expand, ImagePlus, LayoutDashboard, Save, Settings2, Trash2, UploadCloud, X } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
@@ -32,6 +32,8 @@ const publicSiteUrl = "https://panini-gloire.netlify.app";
 export default function Admin() {
   const [authenticated, setAuthenticated] = useState(false);
   const [pin, setPin] = useState("");
+  const [pinDigits, setPinDigits] = useState(["", "", "", ""]);
+  const pinInputRefs = useRef<Array<HTMLInputElement | null>>([]);
   const [authError, setAuthError] = useState("");
   const [publishState, setPublishState] = useState("");
   const [products, setProducts] = useState<Product[]>(initialProducts);
@@ -105,7 +107,10 @@ export default function Admin() {
     if (error) { setFormError(error); return; }
     setFormError(""); localStorage.setItem("panini-gloire-editor-draft", JSON.stringify({ products, categories, site })); setSaved(true); window.setTimeout(() => setSaved(false), 2200);
   };
-  const login = async () => { setAuthError(""); const response = await fetch("/api/admin-auth", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ pin }) }); if (response.ok) { setAuthenticated(true); setPin(""); } else setAuthError("PIN incorrect ou service indisponible."); };
+  const updatePinDigit = (index: number, value: string) => { const digit = value.replace(/\D/g, "").slice(-1); setPinDigits((current) => { const next = [...current]; next[index] = digit; setPin(next.join("")); return next; }); if (digit && index < 3) pinInputRefs.current[index + 1]?.focus(); };
+  const handlePinPaste = (event: React.ClipboardEvent<HTMLInputElement>) => { event.preventDefault(); const digits = event.clipboardData.getData("text").replace(/\D/g, "").slice(0, 4).split(""); const next = ["", "", "", ""]; digits.forEach((digit, index) => { next[index] = digit; }); setPinDigits(next); setPin(next.join("")); pinInputRefs.current[Math.min(digits.length, 3)]?.focus(); };
+  const handlePinKeyDown = (index: number, event: React.KeyboardEvent<HTMLInputElement>) => { if (event.key === "Backspace" && !pinDigits[index] && index > 0) pinInputRefs.current[index - 1]?.focus(); if (event.key === "ArrowLeft" && index > 0) pinInputRefs.current[index - 1]?.focus(); if (event.key === "ArrowRight" && index < 3) pinInputRefs.current[index + 1]?.focus(); };
+  const login = async () => { setAuthError(""); if (pin.length !== 4) { setAuthError("Entrez les 4 chiffres du code PIN."); return; } const response = await fetch("/api/admin-auth", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ pin }) }); if (response.ok) { setAuthenticated(true); setPin(""); setPinDigits(["", "", "", ""]); } else setAuthError("PIN incorrect ou service indisponible."); };
   const publish = async () => { setPublishState("Publication en cours…"); const response = await fetch("/api/publish-content", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ products, categories, site, message: "chore: update editorial content" }) }); setPublishState(response.ok ? "Proposition GitHub créée." : "Publication refusée. Vérifiez la session et les secrets Netlify."); };
   const downloadQr = () => {
     const svg = document.getElementById("panini-public-qr"); if (!svg) return;
@@ -116,7 +121,7 @@ export default function Admin() {
   };
   const copyPublicLink = async () => { try { if (navigator.clipboard) await navigator.clipboard.writeText(publicSiteUrl); else { const input = document.createElement("textarea"); input.value = publicSiteUrl; input.style.position = "fixed"; input.style.opacity = "0"; document.body.appendChild(input); input.select(); document.execCommand("copy"); input.remove(); } setCopyNotice("Lien copié"); } catch { setCopyNotice("Copie impossible"); } window.setTimeout(() => setCopyNotice(""), 2200); };
 
-  if (!authenticated) return <main className="admin-page admin-login-page"><section className="admin-login-card"><p className="eyebrow dark">PANINI DE LA GLOIRE</p><h1>CONFIGURATION</h1><p>Le PIN est vérifié côté serveur et n’est jamais intégré au bundle public.</p><label>ENTREZ VOTRE CODE PIN<input autoFocus type="password" inputMode="numeric" value={pin} onChange={(event) => setPin(event.target.value)} onKeyDown={(event) => { if (event.key === "Enter") void login(); }} /></label><button className="primary-button" onClick={() => void login()}>Accéder au dashboard</button>{authError && <p className="auth-error">{authError}</p>}<Link href="/" className="back-link">Retour au site</Link></section></main>;
+  if (!authenticated) return <main className="admin-page admin-login-page"><section className="admin-login-card"><p className="eyebrow dark">PANINI DE LA GLOIRE</p><h1>CONFIGURATION</h1><p>Le PIN est vérifié côté serveur et n’est jamais intégré au bundle public.</p><label>ENTREZ VOTRE CODE PIN<div className="pin-inputs" role="group" aria-label="Code PIN à 4 chiffres">{pinDigits.map((digit, index) => <input key={index} ref={(element) => { pinInputRefs.current[index] = element; }} className="pin-input" autoFocus={index === 0} type="password" inputMode="numeric" maxLength={1} value={digit} aria-label={`Chiffre ${index + 1} sur 4`} onChange={(event) => updatePinDigit(index, event.target.value)} onPaste={handlePinPaste} onKeyDown={(event) => { handlePinKeyDown(index, event); if (event.key === "Enter") void login(); }} />)}</div></label><button className="primary-button" onClick={() => void login()}>Accéder au dashboard</button>{authError && <p className="auth-error">{authError}</p>}<Link href="/" className="back-link">Retour au site</Link></section></main>;
 
   return (
     <main className="admin-page">

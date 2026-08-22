@@ -254,6 +254,10 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .admin-login-card label { display: block; color: var(--cacao); font-weight: 800; font-size: 13px; }
 .admin-login-card input { display: block; width: 100%; margin-top: 8px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: white; color: var(--cacao); letter-spacing: .3em; outline: none; }
 .admin-login-card input:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(237,125,49,.13); }
+.pin-inputs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.admin-login-card .pin-input { min-height: 72px; margin-top: 8px; padding: 8px; border-color: #e3a76f; border-radius: 14px; text-align: center; font-size: 32px; font-weight: 900; letter-spacing: 0; }
+.admin-login-card .pin-input:focus { border-color: var(--orange); box-shadow: 0 0 0 4px rgba(237,125,49,.2); }
+@media (max-width: 480px) { .pin-inputs { gap: 8px; } .admin-login-card .pin-input { min-height: 60px; font-size: 26px; } }
 .admin-login-card .primary-button { width: 100%; justify-content: center; margin-top: 18px; }
 .auth-error { color: var(--burgundy); font-size: 13px; font-weight: 800; margin: 12px 0 0; }
 .admin-login-card .back-link { display: inline-block; margin-top: 22px; }
