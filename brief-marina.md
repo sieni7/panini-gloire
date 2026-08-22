@@ -24,7 +24,7 @@ Ils peuvent ensuite indiquer leur nom et leur numéro de téléphone, puis chois
 
 ## 3. Ce que Marina peut gérer dans l’espace privé
 
-L’espace privé s’ouvre depuis l’adresse `/dashboard`. Son en-tête affiche **ESPACE PRIVÉ** et **CONFIGURATION**. Les rubriques sont présentées dans cet ordre : **Produits**, **Catégories**, puis **Informations du site**.
+L’espace privé s’ouvre depuis l’adresse `/dashboard`. Son en-tête affiche **ESPACE PRIVÉ** et **CONFIGURATION**. Les rubriques sont présentées dans cet ordre : **Produits**, **Catégories**, puis **Informations du site**. Une rubrique **Documentation** est également disponible dans la barre latérale : elle regroupe le guide pratique et la FAQ, sans qu’il soit nécessaire de quitter l’espace privé.
 
 Dans le dashboard, Marina peut modifier les informations du catalogue : le nom d’un produit, sa description, son prix et sa disponibilité. Lorsqu’un produit est indisponible, sa photo reste visible, mais le bouton **Ajouter** devient grisé et ne peut plus être utilisé.
 

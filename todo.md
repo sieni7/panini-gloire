@@ -259,6 +259,13 @@
 - [x] Mettre à jour brief-marina.md avec les changements visibles.
 - [ ] Refaire check, build, commit, push et publication.
 
+## Documentation intégrée à l’espace privé
+- [x] Ajouter le lien « Documentation » dans la sidebar du Dashboard.
+- [x] Afficher le guide Marina et la FAQ dans une page privée dédiée.
+- [x] Conserver le message client et les consignes sans jargon technique.
+- [x] Vérifier l’accès, le responsive et les routes existantes avec check et build.
+- [x] Mettre à jour le guide Marina, puis valider et synchroniser.
+
 ## FAQ client à enrichir dans le guide Marina
 - [x] Ajouter des questions et réponses prêtes à reprendre par Marina.
 - [x] Couvrir commande, paiement, WhatsApp, livraison et rupture de stock.
