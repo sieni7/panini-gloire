@@ -30,6 +30,12 @@ Marina peut aussi remplacer la photo d’un produit et modifier les informations
 
 Les changements peuvent d’abord être enregistrés comme brouillon. La publication est ensuite préparée pour mettre à jour les fichiers du site. Après une publication, il faut vérifier le site public pour confirmer que la modification apparaît correctement.
 
+Marina peut également ouvrir la rubrique **Catégories** pour ajouter une nouvelle catégorie, renommer une catégorie existante ou la supprimer. Une catégorie ne peut être supprimée que si aucun produit ne lui est encore associé.
+
+Dans la carte **Votre lien de commande**, les boutons permettent de copier le lien du site, d’agrandir le QR code ou de télécharger son image. Le QR code peut ensuite être imprimé ou partagé pour permettre aux clients d’ouvrir directement la carte.
+
+Pour une modification importante, vérifiez d’abord le brouillon, puis la publication et enfin le site public. Si un changement n’apparaît pas tout de suite, actualisez la page après quelques instants.
+
 ## 4. Ce que l’application ne fait pas encore
 
 Pour éviter toute confusion, voici les limites actuelles :
