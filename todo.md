@@ -240,6 +240,12 @@
 - [x] Mettre à jour brief-marina.md après chaque évolution fonctionnelle ou modification visible.
 - [x] Vérifier que le guide décrit les fonctions disponibles, les limites et les conseils d’utilisation.
 
+## Blocage Netlify confirmé par contrôle visuel
+- [ ] Identifier le site Netlify réellement lié au domaine public.
+- [ ] Comparer son dernier déploiement avec le commit GitHub `f60c6a5`.
+- [ ] Relancer le déploiement du bon dépôt et de la branche `main`.
+- [ ] Recontrôler les libellés publics et mettre à jour brief-marina.md.
+
 ## Écart de déploiement à résoudre
 - [ ] Vérifier pourquoi Netlify affiche encore les anciens libellés du dashboard.
 - [x] Confirmer que le dépôt local et GitHub utilisent bien la branche main actuelle ; la liaison Netlify reste à vérifier.
