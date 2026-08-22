@@ -99,6 +99,11 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Modification de l’en-tête
+- [x] Afficher « PANINI DE LA GLOIRE » en titre fort.
+- [x] Placer « ADJAMÉ BINGERVILLE • EN FACE DE BONPRIX » sous le titre.
+- [x] Appliquer un rayon de bordure de 5 px au logo.
+
 ## Règle de synchronisation locale et distante
 - [x] Vérifier l’état local et la branche GitHub avant chaque livraison.
 - [x] Exécuter `pnpm run check` et `pnpm run build` localement.

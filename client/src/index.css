@@ -42,10 +42,11 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .site-header { background: rgba(255, 248, 232, 0.92); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 30; backdrop-filter: blur(16px); }
 .header-inner { max-width: 1180px; margin: 0 auto; padding: 18px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .brand-lockup { display: flex; align-items: center; gap: 12px; color: var(--cacao); text-decoration: none; }
-.brand-mark { width: 42px; height: 42px; object-fit: contain; }
-.brand-lockup span { display: grid; gap: 4px; }
+.brand-mark { width: 42px; height: 42px; object-fit: contain; border-radius: 5px; }
+.brand-copy { display: flex !important; flex-direction: column; gap: 4px; }
 .brand-lockup small, .eyebrow { color: var(--burgundy); font-size: 11px; font-weight: 800; letter-spacing: .19em; }
-.brand-lockup strong { font-family: "Plus Jakarta Sans", sans-serif; font-size: 20px; letter-spacing: -.04em; }
+.brand-copy strong { order: 1; color: var(--cacao); font-family: "Plus Jakarta Sans", sans-serif; font-size: 20px; font-weight: 950; letter-spacing: .035em; line-height: 1; }
+.brand-copy small { order: 2; color: var(--burgundy); font-size: 10px; font-weight: 900; letter-spacing: .13em; line-height: 1.2; }
 .account-link { display: inline-flex; align-items: center; gap: 8px; color: var(--burgundy); border: 1px solid rgba(125,31,53,.25); border-radius: 999px; padding: 11px 16px; font-weight: 800; text-decoration: none; transition: transform 160ms var(--ease-out), background 160ms var(--ease-out); }
 .account-link:hover { background: #fff1bf; transform: translateY(-2px); }
 
@@ -104,7 +105,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes slide { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
 @media (max-width: 850px) { .hero-shell { margin: 22px 16px 0; min-height: 620px; display: block; } .hero-copy { width: 100%; padding: 52px 28px 42px; } .hero-image { width: 100%; min-height: 230px; } .product-grid { grid-template-columns: repeat(2, 1fr); } .menu-section { padding: 0 16px; margin-top: 64px; } .header-inner { padding: 14px 16px; } .brand-lockup small { font-size: 9px; letter-spacing: .13em; } .account-link { font-size: 0; padding: 11px; } .account-link svg { width: 18px; } }
-@media (max-width: 520px) { .brand-mark { width: 34px; height: 34px; } .brand-lockup strong { font-size: 17px; } .brand-lockup small { max-width: 210px; line-height: 1.25; } .hero-copy h1 { font-size: 52px; } .hero-intro { font-size: 16px; } .section-heading { display: block; } .delivery-note { display: block; margin-top: 14px; font-size: 13px; } .product-grid { gap: 10px; } .product-info { display: block; } .product-info > strong { display: block; margin-top: 8px; } .cart-drawer { padding: 24px 18px; } }
+@media (max-width: 520px) { .brand-mark { width: 34px; height: 34px; } .brand-lockup strong { font-size: 17px; } .brand-copy small { max-width: 260px; line-height: 1.25; } .hero-copy h1 { font-size: 52px; } .hero-intro { font-size: 16px; } .section-heading { display: block; } .delivery-note { display: block; margin-top: 14px; font-size: 13px; } .product-grid { gap: 10px; } .product-info { display: block; } .product-info > strong { display: block; margin-top: 8px; } .cart-drawer { padding: 24px 18px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
 
 /* Confirmation surfaces: red and orange action, ivory card, cacao type. */

@@ -44,7 +44,7 @@ export default function Home() {
 
   return <main className="min-h-screen pb-28">
     <header className="site-header">
-      <div className="header-inner"><Link href="/" className="brand-lockup"><img src="/manus-storage/panini-gloire-logo_77ce412b.png" alt="" className="brand-mark" /><span><small>ADJAMÉ BINGERVILLE • EN FACE DE BONPRIX</small><strong>Panini de la Gloire</strong></span></Link><Link href="/commande" className="account-link">Commander <ArrowRight size={16} /></Link></div>
+      <div className="header-inner"><Link href="/" className="brand-lockup"><img src="/manus-storage/panini-gloire-logo_77ce412b.png" alt="Logo Panini de la Gloire" className="brand-mark" /><span className="brand-copy"><strong>PANINI DE LA GLOIRE</strong><small>ADJAMÉ BINGERVILLE • EN FACE DE BONPRIX</small></span></Link><Link href="/commande" className="account-link">Commander <ArrowRight size={16} /></Link></div>
     </header>
 
     <section className="hero-shell">
