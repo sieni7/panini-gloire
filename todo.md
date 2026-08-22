@@ -99,6 +99,12 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Rupture de stock et retrait sur place
+- [x] Ajouter un état de rupture conservant la photo en couleur.
+- [x] Désactiver et griser le bouton « Ajouter » lorsque le produit est indisponible.
+- [x] Ajouter un lien Google Maps dans l’option « Sur place ».
+- [ ] Refaire build, commit, push et test responsive.
+
 ## Badge produit demandé
 - [ ] Ajouter le badge jaune « HOT! » sur Panini Viande.
 - [ ] Vérifier l’affichage mobile et desktop.

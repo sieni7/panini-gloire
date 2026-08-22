@@ -4,11 +4,11 @@ import { ArrowRight, ChevronRight, Minus, Plus, Search, ShoppingBag, Sparkles, X
 
 // Style reminder: enseigne solaire d’Abidjan, bordeaux signal, jaune maïs, orange toasté, surfaces ivoire et composition éditoriale décalée.
 const products = [
-  { id: "simple", name: "Panini Simple", description: "Pain toasté, sauce maison", price: 500, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp" },
+  { id: "simple", name: "Panini Simple", description: "Pain toasté, sauce maison", price: 500, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp", available: true },
   { id: "viande", name: "Panini Viande", description: "Viande assaisonnée, sauce maison", price: 1000, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp", badge: "HOT!" },
-  { id: "jambon", name: "Panini Jambon", description: "Jambon, salade et sauce maison", price: 1500, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp" },
-  { id: "jambon-fromage", name: "Panini Jambon Fromage", description: "Jambon, fromage fondant et sauce maison", price: 2000, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp" },
-  { id: "chawarma", name: "Chawarma Poulet", description: "Poulet mariné, salade et sauce blanche", price: 1500, category: "Chawarma", image: "/assets/panini-gloire-chawarma.webp" },
+  { id: "jambon", name: "Panini Jambon", description: "Jambon, salade et sauce maison", price: 1500, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp", available: true },
+  { id: "jambon-fromage", name: "Panini Jambon Fromage", description: "Jambon, fromage fondant et sauce maison", price: 2000, category: "Panini", image: "/assets/panini-gloire-panini-simple.webp", available: true },
+  { id: "chawarma", name: "Chawarma Poulet", description: "Poulet mariné, salade et sauce blanche", price: 1500, category: "Chawarma", image: "/assets/panini-gloire-chawarma.webp", available: true },
 ];
 
 type CartItem = (typeof products)[number] & { quantity: number };
@@ -37,10 +37,10 @@ export default function Home() {
   const total = useMemo(() => cart.reduce((sum, item) => sum + item.price * item.quantity, 0), [cart]);
   const count = useMemo(() => cart.reduce((sum, item) => sum + item.quantity, 0), [cart]);
 
-  const add = (product: (typeof products)[number]) => setCart((current) => {
+  const add = (product: (typeof products)[number]) => { if (product.available === false) return; setCart((current) => {
     const existing = current.find((item) => item.id === product.id);
     return existing ? current.map((item) => item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item) : [...current, { ...product, quantity: 1 }];
-  });
+  }); };
   const changeQuantity = (id: string, delta: number) => setCart((current) => current.map((item) => item.id === id ? { ...item, quantity: item.quantity + delta } : item).filter((item) => item.quantity > 0));
 
   return <main className="min-h-screen pb-28">
@@ -55,7 +55,7 @@ export default function Home() {
 
     <section id="menu" className="menu-section"><div className="section-heading"><div><p className="eyebrow dark">NOTRE CARTE</p><h2>Aujourd’hui, on se régale</h2></div><span className="delivery-note">Paiement à la livraison</span></div>
       <div className="catalog-tools"><div className="category-tabs" role="tablist">{(["Panini", "Chawarma"] as const).map((item) => <button key={item} className={category === item ? "active" : ""} onClick={() => setCategory(item)} role="tab" aria-selected={category === item}>{item}{item === "Panini" ? "s" : ""}</button>)}</div><label className="search-box"><Search size={17} /><span className="sr-only">Rechercher un produit</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Rechercher dans la carte" /></label></div>
-      <div className="product-grid">{visible.map((product, index) => <article className="product-card" style={{ "--delay": `${index * 70}ms` } as React.CSSProperties} key={product.id}><div className="product-image" style={{ backgroundImage: `url(${product.image})` }} />{product.badge ? <span className="product-badge">{product.badge}</span> : null}{cart.find((item) => item.id === product.id)?.quantity ? <span className="quantity-badge">x{cart.find((item) => item.id === product.id)?.quantity}</span> : null}<div className="product-info"><div><h3>{product.name}</h3><p>{product.description}</p></div><strong>{formatCFA(product.price)}</strong></div><button className="add-button" onClick={() => { add(product); setCartOpen(true); }}><Plus size={17} /> Ajouter</button></article>)}</div></section>
+      <div className="product-grid">{visible.map((product, index) => <article className="product-card" style={{ "--delay": `${index * 70}ms` } as React.CSSProperties} key={product.id}><div className="product-image" style={{ backgroundImage: `url(${product.image})` }} />{product.badge ? <span className="product-badge">{product.badge}</span> : null}{product.available === false ? <span className="stock-badge">RUPTURE</span> : null}{cart.find((item) => item.id === product.id)?.quantity ? <span className="quantity-badge">x{cart.find((item) => item.id === product.id)?.quantity}</span> : null}<div className="product-info"><div><h3>{product.name}</h3><p>{product.description}</p></div><strong>{formatCFA(product.price)}</strong></div><button className={`add-button ${product.available === false ? "is-disabled" : ""}`} disabled={product.available === false} onClick={() => { add(product); setCartOpen(true); }}>{product.available === false ? "Rupture de stock" : <><Plus size={17} /> Ajouter</>}</button></article>)}</div></section>
 
     {count > 0 && <button type="button" className="cart-bar" onClick={() => setCartOpen(true)} aria-label={`Ouvrir le panier, ${count} article${count > 1 ? "s" : ""}`}><span className="cart-bar-label"><span className="cart-icon"><ShoppingBag size={18} /></span><strong>{count} article{count > 1 ? "s" : ""}</strong><small>dans votre panier</small></span><strong>{formatCFA(total)}</strong></button>}
 
