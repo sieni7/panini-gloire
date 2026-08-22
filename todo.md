@@ -85,3 +85,10 @@
 - [ ] Pousser le correctif m.reduce vers GitHub main.
 - [ ] Vérifier que Netlify reconstruit depuis le nouveau commit.
 - [ ] Tester le panier avec localStorage nettoyé.
+
+- [ ] Vérifier la production publique après le correctif m.reduce.
+- [ ] Tester l’ajout et la persistance du panier.
+- [ ] Tester les validations checkout et le lien WhatsApp sans envoi.
+
+- [x] Ajouter la page /confirmation pour éviter le 404 après checkout.
+- [x] Relier la route confirmation et vérifier le message WhatsApp généré.
