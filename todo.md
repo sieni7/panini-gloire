@@ -103,7 +103,7 @@
 - [x] Ajouter un état de rupture conservant la photo en couleur.
 - [x] Désactiver et griser le bouton « Ajouter » lorsque le produit est indisponible.
 - [x] Ajouter un lien Google Maps dans l’option « Sur place ».
-- [ ] Refaire build, commit, push et test responsive.
+- [x] Refaire build, commit, push et test responsive.
 
 ## Badge produit demandé
 - [ ] Ajouter le badge jaune « HOT! » sur Panini Viande.
