@@ -99,6 +99,11 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Brief utilisateur pour Marina
+- [x] Décrire uniquement les fonctions actuellement disponibles.
+- [x] Expliquer clairement ce que l’application ne fait pas encore.
+- [x] Ajouter une FAQ de cinq préoccupations et des conseils pratiques.
+
 ## Correctif build Netlify — Secret Scanning
 - [ ] Exclure uniquement le cache interne `.netlify/**` du scan des secrets.
 - [ ] Relancer check, build, commit et push.
