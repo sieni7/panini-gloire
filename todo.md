@@ -240,6 +240,18 @@
 - [x] Mettre à jour brief-marina.md après chaque évolution fonctionnelle ou modification visible.
 - [x] Vérifier que le guide décrit les fonctions disponibles, les limites et les conseils d’utilisation.
 
+## Ajustements dashboard privé demandés
+- [x] Remplacer « ESPACE ÉDITORIAL » par « ESPACE PRIVÉ ».
+- [x] Remplacer « Le comptoir de Marina » par « CONFIGURATION ».
+- [x] Réordonner le menu : Produits, Catégories, Informations du site.
+- [x] Mettre à jour brief-marina.md, puis valider et synchroniser.
+
+## Test de publication réelle et contrôle post-mise en ligne
+- [ ] Vérifier le dashboard déployé avec le code Marina.
+- [ ] Modifier temporairement un texte ou une disponibilité, puis préparer la publication.
+- [ ] Vérifier le résultat sur le site public sans envoyer de commande réelle.
+- [ ] Décrire cette vérification dans brief-marina.md.
+
 ## Stabilisation finale du dashboard éditorial
 - [x] Auditer la gestion actuelle des produits, catégories, QR et publication.
 - [x] Vérifier et corriger la synchronisation du statut « disponible » avec le catalogue public.

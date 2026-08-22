@@ -22,7 +22,9 @@ Ils peuvent ensuite indiquer leur nom et leur numéro de téléphone, puis chois
 
 À la fin, l’application prépare un message WhatsApp avec la référence, le nom du client, son téléphone, les produits et le total. Le client vérifie le message, puis appuie lui-même sur le bouton pour ouvrir WhatsApp et l’envoyer.
 
-## 3. Ce que Marina peut gérer dans le dashboard
+## 3. Ce que Marina peut gérer dans l’espace privé
+
+L’espace privé s’ouvre depuis l’adresse `/dashboard`. Son en-tête affiche **ESPACE PRIVÉ** et **CONFIGURATION**. Les rubriques sont présentées dans cet ordre : **Produits**, **Catégories**, puis **Informations du site**.
 
 Dans le dashboard, Marina peut modifier les informations du catalogue : le nom d’un produit, sa description, son prix et sa disponibilité. Lorsqu’un produit est indisponible, sa photo reste visible, mais le bouton **Ajouter** devient grisé et ne peut plus être utilisé.
 

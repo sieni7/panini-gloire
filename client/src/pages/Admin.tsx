@@ -125,13 +125,13 @@ export default function Admin() {
 
   return (
     <main className="admin-page">
-      <header className="admin-topbar"><div><p className="eyebrow dark">ESPACE ÉDITORIAL</p><h1>Le comptoir de Marina</h1></div><Link href="/" className="back-link">Voir le site</Link></header>
+      <header className="admin-topbar"><div><p className="eyebrow dark">ESPACE PRIVÉ</p><h1>CONFIGURATION</h1></div><Link href="/" className="back-link">Voir le site</Link></header>
       <div className="admin-layout">
         <aside className="admin-sidebar">
           <div className="admin-brand"><span className="admin-brand-dot" /><strong>Panini de la Gloire</strong></div>
           <button className={active === "products" ? "admin-nav active" : "admin-nav"} onClick={() => setActive("products")}><LayoutDashboard size={18} /> Produits</button>
-          <button className={active === "site" ? "admin-nav active" : "admin-nav"} onClick={() => setActive("site")}><Settings2 size={18} /> Informations du site</button>
           <button className={active === "categories" ? "admin-nav active" : "admin-nav"} onClick={() => { setActive("categories"); setCategoryError(""); }}><LayoutDashboard size={18} /> Catégories</button>
+          <button className={active === "site" ? "admin-nav active" : "admin-nav"} onClick={() => setActive("site")}><Settings2 size={18} /> Informations du site</button>
           <div className="admin-sidebar-note"><strong>Publication GitHub</strong><p>Chaque validation prépare un commit versionné avant reconstruction Netlify.</p></div>
         </aside>
         <section className="admin-content">
