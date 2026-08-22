@@ -100,9 +100,9 @@
 - [x] Valider le build et le rendu responsive.
 
 ## Sprint 2 — Catalogue et navigation
-- [ ] Ajouter une recherche simple au catalogue.
-- [ ] Rendre la navigation des catégories plus pratique sur mobile.
-- [ ] Afficher la quantité choisie sur les cartes produits.
+- [x] Ajouter une recherche simple au catalogue.
+- [x] Rendre la navigation des catégories plus pratique sur mobile.
+- [x] Afficher la quantité choisie sur les cartes produits.
 - [ ] Préparer des visuels distincts par recette.
 - [ ] Refaire build, commit, push et test responsive.
 
