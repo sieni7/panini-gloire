@@ -99,6 +99,11 @@
 - [x] Clarifier les frais de livraison et prévisualiser le message WhatsApp.
 - [x] Valider le build et le rendu responsive.
 
+## Refonte login dashboard
+- [x] Reprendre le titre « CONFIGURATION » et le texte de la maquette.
+- [x] Refaire le champ PIN, le bouton jaune et le lien de retour.
+- [x] Vérifier mobile, build, commit et push avant de reprendre les catégories.
+
 ## Gestion catégories et produits
 - [x] Ajouter, modifier et supprimer des catégories.
 - [x] Ajouter, modifier et supprimer des produits.
